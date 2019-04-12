@@ -10,9 +10,5 @@ import WatchKit
 
 class ClassRowController: NSObject {
     @IBOutlet var classTitleLabel: WKInterfaceLabel!
-    var schedule:  String?  {
-        didSet {
-            guard schedule != nil else { return }
-        }
-    }
+    
 }

@@ -37,7 +37,6 @@
 		7CC38FD122260ACD00AC193A /* Puc Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7CC38FB422260ACB00AC193A /* Puc Watch.app */; };
 		7CC38FDB22262FB400AC193A /* ScheduleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC38FDA22262FB400AC193A /* ScheduleInterfaceController.swift */; };
 		7CC38FDD222631A700AC193A /* ClassRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC38FDC222631A700AC193A /* ClassRowController.swift */; };
-		7CC38FE02227509300AC193A /* StudentWatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC38FDE2227501200AC193A /* StudentWatchModel.swift */; };
 		7CED6BE0223DE269002A026A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BDF223DE269002A026A /* LoginView.swift */; };
 		7CED6BE2223DEC5D002A026A /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BE1223DEC5D002A026A /* TodayView.swift */; };
 		7CED6BE4223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BE3223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift */; };
@@ -123,7 +122,6 @@
 		7CC38FCE22260ACD00AC193A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7CC38FDA22262FB400AC193A /* ScheduleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInterfaceController.swift; sourceTree = "<group>"; };
 		7CC38FDC222631A700AC193A /* ClassRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRowController.swift; sourceTree = "<group>"; };
-		7CC38FDE2227501200AC193A /* StudentWatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentWatchModel.swift; sourceTree = "<group>"; };
 		7CED6BDF223DE269002A026A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CED6BE1223DEC5D002A026A /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		7CED6BE3223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysClassesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -228,7 +226,6 @@
 		7CC38FC422260ACD00AC193A /* Puc Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7CC38FDE2227501200AC193A /* StudentWatchModel.swift */,
 				7CC38FC522260ACD00AC193A /* InterfaceController.swift */,
 				7CC38FC722260ACD00AC193A /* ExtensionDelegate.swift */,
 				7CC38FC922260ACD00AC193A /* NotificationController.swift */,
@@ -429,7 +426,6 @@
 				7CC38FDB22262FB400AC193A /* ScheduleInterfaceController.swift in Sources */,
 				7C88B9D3222756580034D1F8 /* WatchExtensions.swift in Sources */,
 				7CC38FC622260ACD00AC193A /* InterfaceController.swift in Sources */,
-				7CC38FE02227509300AC193A /* StudentWatchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

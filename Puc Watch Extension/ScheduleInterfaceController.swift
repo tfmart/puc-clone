@@ -13,7 +13,7 @@ import Foundation
 class ScheduleInterfaceController: WKInterfaceController {
     @IBOutlet weak var scheduleTable: WKInterfaceTable!
     var classesTitle: [String]!
-    let studentModel =  StudentWatchModel()
+    let pucController =  StudentWatchModel()
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         scheduleTable.setNumberOfRows(classesTitle.count, withRowType: "class")
@@ -36,7 +36,7 @@ class ScheduleInterfaceController: WKInterfaceController {
     }
     
     func getTodaySubjects() {
-        studentModel.getTodaysSchedule(callback: {(takenClasses) -> Void in
+        pucController.getTodaysSchedule(callback: {(takenClasses) -> Void in
             DispatchQueue.main.async {
                 self.classesTitle = takenClasses
                 

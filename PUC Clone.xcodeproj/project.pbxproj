@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4863241207114A86FC6CDD25 /* Pods_PUC_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB5ADE0EF8491454C3EC16 /* Pods_PUC_Clone.framework */; };
-		7C0A60EA2201025C00D30B9B /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0A60E92201025C00D30B9B /* ScheduleView.swift */; };
 		7C2079EB22486419006485C0 /* ClassroomLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */; };
 		7C2A46BB2217537B0066D567 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A46BA2217537B0066D567 /* Schedule.swift */; };
-		7C2A46BD22177EBD0066D567 /* ScheduleFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A46BC22177EBD0066D567 /* ScheduleFlowLayout.swift */; };
 		7C54A33A21FA68B200F6391D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A33921FA68B200F6391D /* AppDelegate.swift */; };
-		7C54A33C21FA68B200F6391D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A33B21FA68B200F6391D /* LoginViewController.swift */; };
 		7C54A33F21FA68B200F6391D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C54A33D21FA68B200F6391D /* Main.storyboard */; };
 		7C54A34121FA68B500F6391D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C54A34021FA68B500F6391D /* Assets.xcassets */; };
 		7C54A34421FA68B500F6391D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C54A34221FA68B500F6391D /* LaunchScreen.storyboard */; };
-		7C54A34C21FA68F800F6391D /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A34B21FA68F800F6391D /* StudentModel.swift */; };
+		7C54A34C21FA68F800F6391D /* PucController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A34B21FA68F800F6391D /* PucController.swift */; };
 		7C54A34E21FA6AC800F6391D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A34D21FA6AC800F6391D /* Student.swift */; };
 		7C54A35021FA6C1F00F6391D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A34F21FA6C1F00F6391D /* Extensions.swift */; };
+		7C597E642254CED700D0E3E5 /* TakenSubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C597E632254CED700D0E3E5 /* TakenSubjectTableViewCell.swift */; };
+		7C597E662254D00900D0E3E5 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C597E652254D00900D0E3E5 /* HistoryTableViewController.swift */; };
 		7C88B9D3222756580034D1F8 /* WatchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88B9D2222756580034D1F8 /* WatchExtensions.swift */; };
 		7C8A268D223EF42D00EF17E0 /* AvaSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A268C223EF42D00EF17E0 /* AvaSite.swift */; };
 		7C8A269122405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A269022405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift */; };
@@ -27,10 +25,8 @@
 		7C8CB2D421FCA1A800F9FCEF /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D321FCA1A800F9FCEF /* System.swift */; };
 		7C8CB2D621FCA1EF00F9FCEF /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D521FCA1EF00F9FCEF /* Subjects.swift */; };
 		7C8CB2D821FCA2AB00F9FCEF /* CompletedSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */; };
-		7C8CB2DA21FCA53500F9FCEF /* TakenSubjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D921FCA53500F9FCEF /* TakenSubjectsTableViewController.swift */; };
-		7C8CB2DC21FCAA6B00F9FCEF /* TakenSubjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2DB21FCAA6B00F9FCEF /* TakenSubjectsTableViewCell.swift */; };
-		7C9FFC782204EFE60001CADC /* ClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FFC772204EFE60001CADC /* ClassCollectionViewCell.swift */; };
-		7C9FFC7A220B7CA90001CADC /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FFC79220B7CA90001CADC /* CircularProgressBar.swift */; };
+		7CA2DFE0225AA0C2007FEA8E /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */; };
+		7CA2DFE2225D6803007FEA8E /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2DFE1225D6803007FEA8E /* Styling.swift */; };
 		7CC38FB822260ACB00AC193A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC38FB622260ACB00AC193A /* Interface.storyboard */; };
 		7CC38FBA22260ACD00AC193A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CC38FB922260ACD00AC193A /* Assets.xcassets */; };
 		7CC38FC122260ACD00AC193A /* Puc Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7CC38FC022260ACD00AC193A /* Puc Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -42,7 +38,7 @@
 		7CC38FDB22262FB400AC193A /* ScheduleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC38FDA22262FB400AC193A /* ScheduleInterfaceController.swift */; };
 		7CC38FDD222631A700AC193A /* ClassRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC38FDC222631A700AC193A /* ClassRowController.swift */; };
 		7CC38FE02227509300AC193A /* StudentWatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC38FDE2227501200AC193A /* StudentWatchModel.swift */; };
-		7CED6BE0223DE269002A026A /* NewLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BDF223DE269002A026A /* NewLoginView.swift */; };
+		7CED6BE0223DE269002A026A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BDF223DE269002A026A /* LoginView.swift */; };
 		7CED6BE2223DEC5D002A026A /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BE1223DEC5D002A026A /* TodayView.swift */; };
 		7CED6BE4223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BE3223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift */; };
 		7CED6BE8223DEE47002A026A /* AVACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED6BE7223DEE47002A026A /* AVACollectionViewCell.swift */; };
@@ -92,21 +88,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		290C5562D1F2CCF66AF1827A /* Pods-PUC Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PUC Clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-PUC Clone/Pods-PUC Clone.release.xcconfig"; sourceTree = "<group>"; };
-		7C0A60E92201025C00D30B9B /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomLocationViewController.swift; sourceTree = "<group>"; };
 		7C2A46BA2217537B0066D567 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		7C2A46BC22177EBD0066D567 /* ScheduleFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFlowLayout.swift; sourceTree = "<group>"; };
 		7C54A33621FA68B200F6391D /* PUC Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PUC Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C54A33921FA68B200F6391D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C54A33B21FA68B200F6391D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C54A33E21FA68B200F6391D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C54A34021FA68B500F6391D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C54A34321FA68B500F6391D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C54A34521FA68B500F6391D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C54A34B21FA68F800F6391D /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
+		7C54A34B21FA68F800F6391D /* PucController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PucController.swift; sourceTree = "<group>"; };
 		7C54A34D21FA6AC800F6391D /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		7C54A34F21FA6C1F00F6391D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7C597E632254CED700D0E3E5 /* TakenSubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenSubjectTableViewCell.swift; sourceTree = "<group>"; };
+		7C597E652254D00900D0E3E5 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		7C88B9D2222756580034D1F8 /* WatchExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchExtensions.swift; sourceTree = "<group>"; };
 		7C8A268C223EF42D00EF17E0 /* AvaSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaSite.swift; sourceTree = "<group>"; };
 		7C8A269022405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyScheduleTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,10 +108,8 @@
 		7C8CB2D321FCA1A800F9FCEF /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		7C8CB2D521FCA1EF00F9FCEF /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedSubjects.swift; sourceTree = "<group>"; };
-		7C8CB2D921FCA53500F9FCEF /* TakenSubjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenSubjectsTableViewController.swift; sourceTree = "<group>"; };
-		7C8CB2DB21FCAA6B00F9FCEF /* TakenSubjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenSubjectsTableViewCell.swift; sourceTree = "<group>"; };
-		7C9FFC772204EFE60001CADC /* ClassCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCollectionViewCell.swift; sourceTree = "<group>"; };
-		7C9FFC79220B7CA90001CADC /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		7CA2DFE1225D6803007FEA8E /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		7CC38FB422260ACB00AC193A /* Puc Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puc Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC38FB722260ACB00AC193A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		7CC38FB922260ACD00AC193A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,21 +124,25 @@
 		7CC38FDA22262FB400AC193A /* ScheduleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInterfaceController.swift; sourceTree = "<group>"; };
 		7CC38FDC222631A700AC193A /* ClassRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRowController.swift; sourceTree = "<group>"; };
 		7CC38FDE2227501200AC193A /* StudentWatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentWatchModel.swift; sourceTree = "<group>"; };
-		7CED6BDF223DE269002A026A /* NewLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginView.swift; sourceTree = "<group>"; };
+		7CED6BDF223DE269002A026A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CED6BE1223DEC5D002A026A /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		7CED6BE3223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysClassesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CED6BE7223DEE47002A026A /* AVACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVACollectionViewCell.swift; sourceTree = "<group>"; };
 		7CF49CEA22407B61004F319E /* ClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
-		81EB5ADE0EF8491454C3EC16 /* Pods_PUC_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PUC_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEF1A9231C8CC5C8987FBC9E /* Pods-PUC Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PUC Clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PUC Clone/Pods-PUC Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4927DAC89C777BD3E6D244F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C54A33321FA68B200F6391D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4863241207114A86FC6CDD25 /* Pods_PUC_Clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,50 +156,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C61AA5B59D48A80F7CE6500 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				81EB5ADE0EF8491454C3EC16 /* Pods_PUC_Clone.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		32C666888C61254C288227C6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FEF1A9231C8CC5C8987FBC9E /* Pods-PUC Clone.debug.xcconfig */,
-				290C5562D1F2CCF66AF1827A /* Pods-PUC Clone.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		7C0A60E8220101E500D30B9B /* Taken Subjects */ = {
-			isa = PBXGroup;
-			children = (
-				7C8CB2D921FCA53500F9FCEF /* TakenSubjectsTableViewController.swift */,
-				7C8CB2DB21FCAA6B00F9FCEF /* TakenSubjectsTableViewCell.swift */,
-			);
-			path = "Taken Subjects";
-			sourceTree = "<group>";
-		};
-		7C0A60EB2201028400D30B9B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7C9FFC772204EFE60001CADC /* ClassCollectionViewCell.swift */,
-				7C54A33B21FA68B200F6391D /* LoginViewController.swift */,
-				7C0A60E92201025C00D30B9B /* ScheduleView.swift */,
-				7C2A46BC22177EBD0066D567 /* ScheduleFlowLayout.swift */,
-				7C0A60E8220101E500D30B9B /* Taken Subjects */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		7C0CB226220E64B900E4F9E2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				7C54A33921FA68B200F6391D /* AppDelegate.swift */,
 				7C54A34F21FA6C1F00F6391D /* Extensions.swift */,
-				7C9FFC79220B7CA90001CADC /* CircularProgressBar.swift */,
+				7CA2DFE1225D6803007FEA8E /* Styling.swift */,
 				7C54A34021FA68B500F6391D /* Assets.xcassets */,
 			);
 			path = "Support Files";
@@ -216,8 +174,6 @@
 				7CC38FB522260ACB00AC193A /* Puc Watch */,
 				7CC38FC422260ACD00AC193A /* Puc Watch Extension */,
 				7C54A33721FA68B200F6391D /* Products */,
-				32C666888C61254C288227C6 /* Pods */,
-				1C61AA5B59D48A80F7CE6500 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,12 +191,11 @@
 			isa = PBXGroup;
 			children = (
 				7C54A34521FA68B500F6391D /* Info.plist */,
-				7CED6BDE223DE247002A026A /* New View Controllers */,
+				7CED6BDE223DE247002A026A /* Views */,
 				7C8CB2D021FCA17B00F9FCEF /* Classes */,
 				7C0CB226220E64B900E4F9E2 /* Support Files */,
 				7C54A33D21FA68B200F6391D /* Main.storyboard */,
-				7C54A34B21FA68F800F6391D /* StudentModel.swift */,
-				7C0A60EB2201028400D30B9B /* View */,
+				7C54A34B21FA68F800F6391D /* PucController.swift */,
 				7C54A34221FA68B500F6391D /* LaunchScreen.storyboard */,
 			);
 			path = "PUC Clone";
@@ -287,19 +242,22 @@
 			path = "Puc Watch Extension";
 			sourceTree = "<group>";
 		};
-		7CED6BDE223DE247002A026A /* New View Controllers */ = {
+		7CED6BDE223DE247002A026A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */,
-				7CED6BDF223DE269002A026A /* NewLoginView.swift */,
+				7CED6BDF223DE269002A026A /* LoginView.swift */,
 				7CED6BE1223DEC5D002A026A /* TodayView.swift */,
 				7CED6BE3223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift */,
 				7CED6BE7223DEE47002A026A /* AVACollectionViewCell.swift */,
 				7C8A269022405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift */,
 				7C8A269222405DBD00EF17E0 /* WeeklyScheduleView.swift */,
 				7CF49CEA22407B61004F319E /* ClassDetailViewController.swift */,
+				7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */,
+				7C597E632254CED700D0E3E5 /* TakenSubjectTableViewCell.swift */,
+				7C597E652254D00900D0E3E5 /* HistoryTableViewController.swift */,
 			);
-			path = "New View Controllers";
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,11 +267,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C54A34821FA68B500F6391D /* Build configuration list for PBXNativeTarget "PUC Clone" */;
 			buildPhases = (
-				49B33315E79A0CE02937C7F3 /* [CP] Check Pods Manifest.lock */,
 				7C54A33221FA68B200F6391D /* Sources */,
 				7C54A33321FA68B200F6391D /* Frameworks */,
 				7C54A33421FA68B200F6391D /* Resources */,
-				669F907F014C74CF32504F14 /* [CP] Embed Pods Frameworks */,
 				7CC38FD922260ACD00AC193A /* Embed Watch Content */,
 			);
 			buildRules = (
@@ -332,6 +288,7 @@
 			buildPhases = (
 				7CC38FB222260ACB00AC193A /* Resources */,
 				7CC38FD722260ACD00AC193A /* Embed App Extensions */,
+				4927DAC89C777BD3E6D244F5 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,12 +329,14 @@
 				TargetAttributes = {
 					7C54A33521FA68B200F6391D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					7CC38FB322260ACB00AC193A = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					7CC38FBF22260ACD00AC193A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -431,59 +390,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		49B33315E79A0CE02937C7F3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PUC Clone-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		669F907F014C74CF32504F14 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PUC Clone/Pods-PUC Clone-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/Sakai/Sakai.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sakai.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PUC Clone/Pods-PUC Clone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		7C54A33221FA68B200F6391D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -491,27 +397,24 @@
 			files = (
 				7C8CB2D621FCA1EF00F9FCEF /* Subjects.swift in Sources */,
 				7CED6BE4223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift in Sources */,
-				7C8CB2DA21FCA53500F9FCEF /* TakenSubjectsTableViewController.swift in Sources */,
 				7CF49CEB22407B61004F319E /* ClassDetailViewController.swift in Sources */,
 				7C2A46BB2217537B0066D567 /* Schedule.swift in Sources */,
 				7C54A35021FA6C1F00F6391D /* Extensions.swift in Sources */,
 				7C8CB2D821FCA2AB00F9FCEF /* CompletedSubjects.swift in Sources */,
 				7C8A269322405DBD00EF17E0 /* WeeklyScheduleView.swift in Sources */,
-				7C0A60EA2201025C00D30B9B /* ScheduleView.swift in Sources */,
-				7C2A46BD22177EBD0066D567 /* ScheduleFlowLayout.swift in Sources */,
-				7C54A33C21FA68B200F6391D /* LoginViewController.swift in Sources */,
 				7C2079EB22486419006485C0 /* ClassroomLocationViewController.swift in Sources */,
+				7C597E662254D00900D0E3E5 /* HistoryTableViewController.swift in Sources */,
+				7CA2DFE2225D6803007FEA8E /* Styling.swift in Sources */,
 				7CED6BE2223DEC5D002A026A /* TodayView.swift in Sources */,
-				7C54A34C21FA68F800F6391D /* StudentModel.swift in Sources */,
+				7C597E642254CED700D0E3E5 /* TakenSubjectTableViewCell.swift in Sources */,
+				7C54A34C21FA68F800F6391D /* PucController.swift in Sources */,
 				7C54A33A21FA68B200F6391D /* AppDelegate.swift in Sources */,
+				7CA2DFE0225AA0C2007FEA8E /* DescriptionViewController.swift in Sources */,
 				7C8CB2D421FCA1A800F9FCEF /* System.swift in Sources */,
-				7CED6BE0223DE269002A026A /* NewLoginView.swift in Sources */,
-				7C8CB2DC21FCAA6B00F9FCEF /* TakenSubjectsTableViewCell.swift in Sources */,
+				7CED6BE0223DE269002A026A /* LoginView.swift in Sources */,
 				7CED6BE8223DEE47002A026A /* AVACollectionViewCell.swift in Sources */,
 				7C8A269122405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift in Sources */,
-				7C9FFC7A220B7CA90001CADC /* CircularProgressBar.swift in Sources */,
 				7C8A268D223EF42D00EF17E0 /* AvaSite.swift in Sources */,
-				7C9FFC782204EFE60001CADC /* ClassCollectionViewCell.swift in Sources */,
 				7C54A34E21FA6AC800F6391D /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,7 +594,6 @@
 		};
 		7C54A34921FA68B500F6391D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEF1A9231C8CC5C8987FBC9E /* Pods-PUC Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -703,14 +605,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tfmartins.PUC-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7C54A34A21FA68B500F6391D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 290C5562D1F2CCF66AF1827A /* Pods-PUC Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -722,7 +623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tfmartins.PUC-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -781,7 +682,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
@@ -803,7 +704,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};

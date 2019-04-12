@@ -27,22 +27,24 @@ class SiteCollection: Codable {
     let createdDate: Int?
     let createdTime: EdTime?
     let description: String?
-    let iconURL, iconURLFull: JSONNull?
+    let iconURL, iconURLFull: String?
     let id: String?
-    let infoURL, infoURLFull, joinerRole: JSONNull?
+    let infoURL, infoURLFull, joinerRole: String?
     let lastModified: Int?
     let maintainRole: String?
     let modifiedDate: Int?
     let modifiedTime: EdTime?
     let owner: String?
     let props: Props?
-    let providerGroupID: JSONNull?
+    let providerGroupID: String?
     let reference: String?
-    let shortDescription, siteGroups: JSONNull?
+    let shortDescription: String?
+    let siteGroups: String?
     let siteOwner: SiteOwner?
-    let skin, softlyDeletedDate: JSONNull?
+    let skin: String?
+    let softlyDeletedDate: Date?
     let title: String?
-    let type: JSONNull?
+    let type: String?
     let userRoles: [String]?
     let activeEdit, customPageOrdered, empty, joinable: Bool?
     let pubView, published, softlyDeleted: Bool?
@@ -64,7 +66,7 @@ class SiteCollection: Codable {
         case entityTitle
     }
     
-    init(createdDate: Int?, createdTime: EdTime?, description: String?, iconURL: JSONNull?, iconURLFull: JSONNull?, id: String?, infoURL: JSONNull?, infoURLFull: JSONNull?, joinerRole: JSONNull?, lastModified: Int?, maintainRole: String?, modifiedDate: Int?, modifiedTime: EdTime?, owner: String?, props: Props?, providerGroupID: JSONNull?, reference: String?, shortDescription: JSONNull?, siteGroups: JSONNull?, siteOwner: SiteOwner?, skin: JSONNull?, softlyDeletedDate: JSONNull?, title: String?, type: JSONNull?, userRoles: [String]?, activeEdit: Bool?, customPageOrdered: Bool?, empty: Bool?, joinable: Bool?, pubView: Bool?, published: Bool?, softlyDeleted: Bool?, entityReference: String?, entityURL: String?, entityID: String?, entityTitle: String?) {
+    init(createdDate: Int?, createdTime: EdTime?, description: String?, iconURL: String?, iconURLFull: String?, id: String?, infoURL: String?, infoURLFull: String?, joinerRole: String?, lastModified: Int?, maintainRole: String?, modifiedDate: Int?, modifiedTime: EdTime?, owner: String?, props: Props?, providerGroupID: String?, reference: String?, shortDescription: String?, siteGroups: String?, siteOwner: SiteOwner?, skin: String?, softlyDeletedDate: Date?, title: String?, type: String?, userRoles: [String]?, activeEdit: Bool?, customPageOrdered: Bool?, empty: Bool?, joinable: Bool?, pubView: Bool?, published: Bool?, softlyDeleted: Bool?, entityReference: String?, entityURL: String?, entityID: String?, entityTitle: String?) {
         self.createdDate = createdDate
         self.createdTime = createdTime
         self.description = description
@@ -151,31 +153,6 @@ class SiteOwner: Codable {
 }
 
 // MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-    
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-    
-    public var hashValue: Int {
-        return 0
-    }
-    
-    public init() {}
-    
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
 
 fileprivate func newJSONDecoder() -> JSONDecoder {
     let decoder = JSONDecoder()

@@ -30,4 +30,5 @@ class Schedule: Decodable {
     let datFinal: String?
     let dataRodizio: String?
     let turno: String?
+    let dataUltimoLancFreq: String?
 }

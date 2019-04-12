@@ -23,6 +23,8 @@ struct BasicSubject {
     let name: String?
     let grade: String?
     let acceptance: String?
+    let code: String?
+    let hours: String?
 }
 
 struct CompletedTableCell {

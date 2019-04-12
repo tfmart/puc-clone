@@ -12,16 +12,7 @@ import Foundation
 
 class ScheduleInterfaceController: WKInterfaceController {
     @IBOutlet weak var scheduleTable: WKInterfaceTable!
-    var classesTitle: [String]!
-    let pucController =  StudentWatchModel()
     override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        scheduleTable.setNumberOfRows(classesTitle.count, withRowType: "class")
-        // Configure interface objects here.
-        for index in 0..<scheduleTable.numberOfRows {
-            guard let controller = scheduleTable.rowController(at: index) as? ClassRowController else { continue }
-            controller.classTitleLabel.setText(classesTitle[index])
-        }
     }
 
     override func willActivate() {
@@ -36,12 +27,7 @@ class ScheduleInterfaceController: WKInterfaceController {
     }
     
     func getTodaySubjects() {
-        pucController.getTodaysSchedule(callback: {(takenClasses) -> Void in
-            DispatchQueue.main.async {
-                self.classesTitle = takenClasses
-                
-            }
-        })
+        
     }
 
 }

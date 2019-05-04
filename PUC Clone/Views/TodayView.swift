@@ -46,10 +46,10 @@ class TodayView: UIViewController {
         })
         
         //Style button
-        completeScheduleButton.styleCompleteScheduleButton()
+        //completeScheduleButton.styleCompleteScheduleButton()
         
         //Style No Classes View
-        noClassMessageView.styleNoClassMessage()
+        //noClassMessageView.styleNoClassMessage()
         
         self.headerLabel.text = ""
         super.navigationItem.title = currentDate.scheduleDateTitle()
@@ -104,8 +104,19 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.todayClassesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "todayClass", for: indexPath) as! TodaysClassesCollectionViewCell
-            cell.styleTodayCell(schedule: todayClasses[indexPath.row])
-            cell.fillTodayCell(schedule: todayClasses[indexPath.row])
+            cell.classTitle.text = todayClasses[indexPath.row].nomeDisciplina?.formatTitle()
+            cell.scheduleLabel.text = todayClasses[indexPath.row].horario
+            cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
+            cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"
+            cell.attendanceLabel.text = "\(todayClasses[indexPath.row].frequencia ?? 0.0)% de presença"
+            if pucController.setAttendanceIcon(attendance: todayClasses[indexPath.row].frequencia ?? 0.0) {
+                cell.attendanceIcon.image = UIImage(named: "Good Attendance")
+            } else {
+                cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
+            }
+            cell.styleCell()
+            //cell.styleTodayCell(schedule: todayClasses[indexPath.row])
+            //cell.fillTodayCell(schedule: todayClasses[indexPath.row])
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ava", for: indexPath) as! AVACollectionViewCell
@@ -114,7 +125,8 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.avaAreaTitleLabel.text = titles[indexPath.row].title
             }
             //Stylying the cell
-            cell.styleAvaCell()
+            cell.styleCell()
+            //cell.styleAvaCell()
             return cell
         }
     }

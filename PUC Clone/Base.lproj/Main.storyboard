@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,19 +105,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-P8-d50" userLabel="Blue Background View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="115"/>
-                                <color key="backgroundColor" red="0.15294117647058825" green="0.43529411764705883" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nCa-P8-d50" secondAttribute="height" multiplier="64:23" id="2sE-Zm-bBX"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você tem 2 aulas hoje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx2-Jd-R71" userLabel="Today Schedule Header">
-                                <rect key="frame" x="12" y="80" width="184" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6r-zY-Vmf" userLabel="No Class Message View">
                                 <rect key="frame" x="42" y="147" width="236" height="62"/>
                                 <subviews>
@@ -135,7 +122,20 @@
                                     <constraint firstItem="Rak-yM-v5D" firstAttribute="centerY" secondItem="i6r-zY-Vmf" secondAttribute="centerY" id="mdp-Pt-3dF"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UnI-LE-ull" userLabel="Today Schedule Collection View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-P8-d50" userLabel="Blue Background View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.43529411764705883" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nCa-P8-d50" secondAttribute="height" multiplier="320:179" id="pTn-WW-bcc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você tem 2 aulas hoje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx2-Jd-R71" userLabel="Today Schedule Header">
+                                <rect key="frame" x="12" y="80" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UnI-LE-ull" userLabel="Today Schedule Collection View">
                                 <rect key="frame" x="0.0" y="114" width="320" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -295,7 +295,7 @@
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OkC-em-NL1" userLabel="AVA Collection View">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OkC-em-NL1" userLabel="AVA Collection View">
                                 <rect key="frame" x="0.0" y="351" width="320" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -372,7 +372,7 @@
                             <constraint firstItem="i6r-zY-Vmf" firstAttribute="centerX" secondItem="407-RG-x3k" secondAttribute="centerX" id="hGM-XV-zNH"/>
                             <constraint firstItem="ckS-An-RKp" firstAttribute="trailing" secondItem="GVv-PU-1bT" secondAttribute="trailing" constant="8" id="ncn-DF-lHe"/>
                             <constraint firstItem="1ob-Ca-Yv9" firstAttribute="centerX" secondItem="407-RG-x3k" secondAttribute="centerX" id="o9m-f4-cRP"/>
-                            <constraint firstItem="nCa-P8-d50" firstAttribute="top" secondItem="ckS-An-RKp" secondAttribute="top" id="oiu-s8-VrL"/>
+                            <constraint firstItem="nCa-P8-d50" firstAttribute="top" secondItem="407-RG-x3k" secondAttribute="top" id="oiu-s8-VrL"/>
                             <constraint firstItem="UnI-LE-ull" firstAttribute="top" secondItem="Yx2-Jd-R71" secondAttribute="baseline" constant="17.5" id="tbX-iO-Gjh"/>
                             <constraint firstItem="S3m-av-Hul" firstAttribute="leading" secondItem="ckS-An-RKp" secondAttribute="leading" constant="12" id="xMH-eF-gTY"/>
                             <constraint firstItem="S3m-av-Hul" firstAttribute="top" secondItem="1ob-Ca-Yv9" secondAttribute="bottom" constant="16" id="xin-Ut-0On"/>
@@ -536,31 +536,31 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="professor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-Rq-MO2" userLabel="Professor Label">
-                                                    <rect key="frame" x="28" y="56" width="255" height="20"/>
+                                                    <rect key="frame" x="28" y="56" width="349" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-y7-yyT" userLabel="Schedule Label">
-                                                    <rect key="frame" x="28" y="34" width="255" height="16"/>
+                                                    <rect key="frame" x="28" y="34" width="349" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHY-EG-YZQ" userLabel="Title Label">
-                                                    <rect key="frame" x="8" y="6" width="275" height="22"/>
+                                                    <rect key="frame" x="8" y="6" width="369" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="classroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-Wc-gsj" userLabel="Classroom Label">
-                                                    <rect key="frame" x="28" y="82" width="255" height="17"/>
+                                                    <rect key="frame" x="28" y="82" width="349" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="attendance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyb-1t-OP9" userLabel="Attendance Label">
-                                                    <rect key="frame" x="28" y="106" width="255" height="17"/>
+                                                    <rect key="frame" x="28" y="106" width="349" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
@@ -617,7 +617,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="attendanceIcon" destination="Q8q-kp-Ne3" id="BTx-ic-ylG"/>
-                                            <outlet property="attendancelabel" destination="Gyb-1t-OP9" id="RJ9-6m-KOn"/>
+                                            <outlet property="attendanceLabel" destination="Gyb-1t-OP9" id="RJ9-6m-KOn"/>
                                             <outlet property="classroomLabel" destination="zNA-Wc-gsj" id="9kG-av-fms"/>
                                             <outlet property="professorLabel" destination="5pF-Rq-MO2" id="BCu-mI-G2T"/>
                                             <outlet property="scheduleLabel" destination="dpZ-y7-yyT" id="vhL-3G-xan"/>
@@ -969,7 +969,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9El-1S-NfE">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1025,14 +1025,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Classroom Location" width="2137" height="2138"/>
-        <image name="Description Detail" width="1604" height="2138"/>
-        <image name="Professor Icon" width="1871" height="2138"/>
-        <image name="Route Icon" width="1069" height="1069"/>
-        <image name="Time Icon" width="2071" height="2071"/>
+        <image name="Classroom Location" width="512.8800048828125" height="513.1199951171875"/>
+        <image name="Description Detail" width="385" height="513.1199951171875"/>
+        <image name="Professor Icon" width="449" height="513.1199951171875"/>
+        <image name="Route Icon" width="513.1199951171875" height="513.1199951171875"/>
+        <image name="Time Icon" width="497" height="497"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m57-gN-nfv"/>
+        <segue reference="6n4-Cc-Exd"/>
         <segue reference="fB2-WK-XrM"/>
     </inferredMetricsTieBreakers>
 </document>

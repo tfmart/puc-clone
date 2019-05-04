@@ -15,6 +15,6 @@ class WeeklyScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var scheduleLabel: UILabel!
     @IBOutlet weak var professorLabel: UILabel!
     @IBOutlet weak var classroomLabel: UILabel!
-    @IBOutlet weak var attendancelabel: UILabel!
+    @IBOutlet weak var attendanceLabel: UILabel!
     @IBOutlet weak var attendanceIcon: UIImageView!
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C2079EB22486419006485C0 /* ClassroomLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */; };
 		7C2A46BB2217537B0066D567 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A46BA2217537B0066D567 /* Schedule.swift */; };
+		7C4977792279FACB00286045 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4977782279FACB00286045 /* Style.swift */; };
 		7C54A33A21FA68B200F6391D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A33921FA68B200F6391D /* AppDelegate.swift */; };
 		7C54A33F21FA68B200F6391D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C54A33D21FA68B200F6391D /* Main.storyboard */; };
 		7C54A34121FA68B500F6391D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C54A34021FA68B500F6391D /* Assets.xcassets */; };
@@ -26,7 +27,6 @@
 		7C8CB2D621FCA1EF00F9FCEF /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D521FCA1EF00F9FCEF /* Subjects.swift */; };
 		7C8CB2D821FCA2AB00F9FCEF /* CompletedSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */; };
 		7CA2DFE0225AA0C2007FEA8E /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */; };
-		7CA2DFE2225D6803007FEA8E /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2DFE1225D6803007FEA8E /* Styling.swift */; };
 		7CC38FB822260ACB00AC193A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC38FB622260ACB00AC193A /* Interface.storyboard */; };
 		7CC38FBA22260ACD00AC193A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CC38FB922260ACD00AC193A /* Assets.xcassets */; };
 		7CC38FC122260ACD00AC193A /* Puc Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7CC38FC022260ACD00AC193A /* Puc Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -89,6 +89,7 @@
 /* Begin PBXFileReference section */
 		7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomLocationViewController.swift; sourceTree = "<group>"; };
 		7C2A46BA2217537B0066D567 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		7C4977782279FACB00286045 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		7C54A33621FA68B200F6391D /* PUC Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PUC Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C54A33921FA68B200F6391D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C54A33E21FA68B200F6391D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		7C8CB2D521FCA1EF00F9FCEF /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedSubjects.swift; sourceTree = "<group>"; };
 		7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
-		7CA2DFE1225D6803007FEA8E /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		7CC38FB422260ACB00AC193A /* Puc Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puc Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC38FB722260ACB00AC193A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		7CC38FB922260ACD00AC193A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			children = (
 				7C54A33921FA68B200F6391D /* AppDelegate.swift */,
 				7C54A34F21FA6C1F00F6391D /* Extensions.swift */,
-				7CA2DFE1225D6803007FEA8E /* Styling.swift */,
+				7C4977782279FACB00286045 /* Style.swift */,
 				7C54A34021FA68B500F6391D /* Assets.xcassets */,
 			);
 			path = "Support Files";
@@ -401,7 +401,6 @@
 				7C8A269322405DBD00EF17E0 /* WeeklyScheduleView.swift in Sources */,
 				7C2079EB22486419006485C0 /* ClassroomLocationViewController.swift in Sources */,
 				7C597E662254D00900D0E3E5 /* HistoryTableViewController.swift in Sources */,
-				7CA2DFE2225D6803007FEA8E /* Styling.swift in Sources */,
 				7CED6BE2223DEC5D002A026A /* TodayView.swift in Sources */,
 				7C597E642254CED700D0E3E5 /* TakenSubjectTableViewCell.swift in Sources */,
 				7C54A34C21FA68F800F6391D /* PucController.swift in Sources */,
@@ -412,6 +411,7 @@
 				7CED6BE8223DEE47002A026A /* AVACollectionViewCell.swift in Sources */,
 				7C8A269122405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift in Sources */,
 				7C8A268D223EF42D00EF17E0 /* AvaSite.swift in Sources */,
+				7C4977792279FACB00286045 /* Style.swift in Sources */,
 				7C54A34E21FA6AC800F6391D /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,7 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tfmartins.PUC-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -619,7 +619,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tfmartins.PUC-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -678,7 +678,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
@@ -700,7 +700,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};

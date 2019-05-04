@@ -62,7 +62,7 @@ extension WeeklyScheduleView: UITableViewDelegate, UITableViewDataSource {
         cell.scheduleLabel.text = todayClasses[indexPath.row].horario
         cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
         cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"
-        cell.attendancelabel.text = "\(todayClasses[indexPath.row].frequencia ?? 0.0)% de presença"
+        cell.attendanceLabel.text = "\(todayClasses[indexPath.row].frequencia ?? 0.0)% de presença"
         if pucController.setAttendanceIcon(attendance: todayClasses[indexPath.row].frequencia ?? 0.0) {
             cell.attendanceIcon.image = UIImage(named: "Good Attendance")
         } else {

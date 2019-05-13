@@ -29,6 +29,7 @@ class TodayView: UIViewController {
     var pucController = PucController()
     var avaTitles: AvaSite?
     var token: String?
+    var routeIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +46,8 @@ class TodayView: UIViewController {
             }
         })
         
-        //Style button
-        //completeScheduleButton.styleCompleteScheduleButton()
-        
-        //Style No Classes View
-        //noClassMessageView.styleNoClassMessage()
-        
         self.headerLabel.text = ""
+        self.styleNoClassView()
         super.navigationItem.title = currentDate.scheduleDateTitle()
         self.getTodayClasses()
         self.getCompletedSubjects()
@@ -69,9 +65,7 @@ class TodayView: UIViewController {
         }
         if segue.identifier == "locationFromToday"{
             if let mapView = segue.destination as? ClassroomLocationViewController {
-                let idx1 = todayClassesCollectionView.indexPathsForSelectedItems! as NSArray
-                let idx2: IndexPath = idx1[0] as! IndexPath
-                mapView.classToLocate = todayClasses[idx2.row]
+                mapView.classToLocate = todayClasses[routeIndex ?? 0]
             }
         }
         if segue.identifier == "weekSchedule" {
@@ -109,14 +103,13 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
             cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"
             cell.attendanceLabel.text = "\(todayClasses[indexPath.row].frequencia ?? 0.0)% de presença"
+            cell.routeButton.tag = indexPath.row
             if pucController.setAttendanceIcon(attendance: todayClasses[indexPath.row].frequencia ?? 0.0) {
                 cell.attendanceIcon.image = UIImage(named: "Good Attendance")
             } else {
                 cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
             }
             cell.styleCell()
-            //cell.styleTodayCell(schedule: todayClasses[indexPath.row])
-            //cell.fillTodayCell(schedule: todayClasses[indexPath.row])
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ava", for: indexPath) as! AVACollectionViewCell
@@ -126,7 +119,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             }
             //Stylying the cell
             cell.styleCell()
-            //cell.styleAvaCell()
+            
             return cell
         }
     }

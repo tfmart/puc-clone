@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,6 +105,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-P8-d50" userLabel="Blue Background View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.43529411764705883" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nCa-P8-d50" secondAttribute="height" multiplier="320:179" id="pTn-WW-bcc"/>
+                                </constraints>
+                            </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6r-zY-Vmf" userLabel="No Class Message View">
                                 <rect key="frame" x="42" y="147" width="236" height="62"/>
                                 <subviews>
@@ -120,13 +127,6 @@
                                     <constraint firstItem="Rak-yM-v5D" firstAttribute="centerX" secondItem="i6r-zY-Vmf" secondAttribute="centerX" id="AcW-t7-cid"/>
                                     <constraint firstAttribute="width" secondItem="i6r-zY-Vmf" secondAttribute="height" multiplier="80:21" id="Ymy-Ms-Pb4"/>
                                     <constraint firstItem="Rak-yM-v5D" firstAttribute="centerY" secondItem="i6r-zY-Vmf" secondAttribute="centerY" id="mdp-Pt-3dF"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-P8-d50" userLabel="Blue Background View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
-                                <color key="backgroundColor" red="0.15294117647058825" green="0.43529411764705883" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nCa-P8-d50" secondAttribute="height" multiplier="320:179" id="pTn-WW-bcc"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você tem 2 aulas hoje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx2-Jd-R71" userLabel="Today Schedule Header">
@@ -210,7 +210,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-J4-g8z">
-                                                    <rect key="frame" x="8" y="56.5" width="15" height="16"/>
+                                                    <rect key="frame" x="8" y="56.5" width="15.000000000000455" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="HMT-J4-g8z" secondAttribute="height" multiplier="16:17" id="Fcx-NE-pGA"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="iiN-8A-XX5"/>
@@ -529,38 +529,38 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="rac-tb-kKb">
-                                                    <rect key="frame" x="8" y="58" width="16" height="16"/>
+                                                    <rect key="frame" x="8" y="58" width="16.000000000000455" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rac-tb-kKb" secondAttribute="height" multiplier="1:1" id="h4m-oj-BUj"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="rDu-Rs-IfI"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="professor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-Rq-MO2" userLabel="Professor Label">
-                                                    <rect key="frame" x="28" y="56" width="349" height="20"/>
+                                                    <rect key="frame" x="28" y="56" width="255" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-y7-yyT" userLabel="Schedule Label">
-                                                    <rect key="frame" x="28" y="34" width="349" height="16"/>
+                                                    <rect key="frame" x="28" y="34" width="255" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHY-EG-YZQ" userLabel="Title Label">
-                                                    <rect key="frame" x="8" y="6" width="369" height="22"/>
+                                                    <rect key="frame" x="8" y="6" width="275" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="classroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-Wc-gsj" userLabel="Classroom Label">
-                                                    <rect key="frame" x="28" y="82" width="349" height="17"/>
+                                                    <rect key="frame" x="28" y="82" width="255" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="attendance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyb-1t-OP9" userLabel="Attendance Label">
-                                                    <rect key="frame" x="28" y="106" width="349" height="17"/>
+                                                    <rect key="frame" x="28" y="106" width="255" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
@@ -1025,11 +1025,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Classroom Location" width="512.8800048828125" height="513.1199951171875"/>
-        <image name="Description Detail" width="385" height="513.1199951171875"/>
-        <image name="Professor Icon" width="449" height="513.1199951171875"/>
-        <image name="Route Icon" width="513.1199951171875" height="513.1199951171875"/>
-        <image name="Time Icon" width="497" height="497"/>
+        <image name="Classroom Location" width="2137" height="2138"/>
+        <image name="Description Detail" width="1604" height="2138"/>
+        <image name="Professor Icon" width="1871" height="2138"/>
+        <image name="Route Icon" width="1069" height="1069"/>
+        <image name="Time Icon" width="2071" height="2071"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6n4-Cc-Exd"/>

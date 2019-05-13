@@ -90,7 +90,6 @@ class PucController {
             return
         }
         let endpoint = "http://ead.puc-campinas.edu.br/direct/site.json?sakai.session=\(token)"
-        print(endpoint)
         if let url = URL(string: endpoint) {
             URLSession.shared.dataTask(with: URLRequest(url: url), completionHandler: { (data, response, error) in
                 if error != nil {

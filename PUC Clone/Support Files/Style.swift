@@ -25,3 +25,11 @@ extension AVACollectionViewCell {
         self.layer.masksToBounds = true
     }
 }
+
+extension TodayView {
+    func styleNoClassView() {
+        noClassMessageView.layer.cornerRadius = 8.0
+        noClassMessageView.layer.applySketchShadow()
+        noClassMessageView.layer.masksToBounds = true
+    }
+}

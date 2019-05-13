@@ -9,17 +9,10 @@
 //File with extensions used to style UIViews
 
 import Foundation
+import UIKit
 
-extension TodaysClassesCollectionViewCell {
-    func styleCell() {
-        self.layer.cornerRadius = 8.0
-        self.layer.applySketchShadow()
-        self.layer.masksToBounds = true
-    }
-}
-
-extension AVACollectionViewCell {
-    func styleCell() {
+extension UICollectionViewCell {
+    func styleTodayViewCell() {
         self.layer.cornerRadius = 8.0
         self.layer.applySketchShadow()
         self.layer.masksToBounds = true
@@ -31,5 +24,10 @@ extension TodayView {
         noClassMessageView.layer.cornerRadius = 8.0
         noClassMessageView.layer.applySketchShadow()
         noClassMessageView.layer.masksToBounds = true
+    }
+    
+    func styleScheduleButton() {
+        completeScheduleButton.layer.cornerRadius = 8.0
+        completeScheduleButton.layer.masksToBounds = true
     }
 }

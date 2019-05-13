@@ -48,6 +48,7 @@ class TodayView: UIViewController {
         
         self.headerLabel.text = ""
         self.styleNoClassView()
+        self.styleScheduleButton()
         super.navigationItem.title = currentDate.scheduleDateTitle()
         self.getTodayClasses()
         self.getCompletedSubjects()
@@ -109,7 +110,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             } else {
                 cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
             }
-            cell.styleCell()
+            cell.styleTodayViewCell()
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ava", for: indexPath) as! AVACollectionViewCell
@@ -118,7 +119,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.avaAreaTitleLabel.text = titles[indexPath.row].title
             }
             //Stylying the cell
-            cell.styleCell()
+            cell.styleTodayViewCell()
             
             return cell
         }

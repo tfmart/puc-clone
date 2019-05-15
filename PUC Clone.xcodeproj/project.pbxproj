@@ -188,6 +188,7 @@
 		7C54A33821FA68B200F6391D /* PUC Clone */ = {
 			isa = PBXGroup;
 			children = (
+				7C7706B922890E8000B5EB1E /* Cells */,
 				7C54A34521FA68B500F6391D /* Info.plist */,
 				7CED6BDE223DE247002A026A /* Views */,
 				7C8CB2D021FCA17B00F9FCEF /* Classes */,
@@ -197,6 +198,16 @@
 				7C54A34221FA68B500F6391D /* LaunchScreen.storyboard */,
 			);
 			path = "PUC Clone";
+			sourceTree = "<group>";
+		};
+		7C7706B922890E8000B5EB1E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7CED6BE3223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift */,
+				7C8A269022405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift */,
+				7C597E632254CED700D0E3E5 /* TakenSubjectTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7C8CB2D021FCA17B00F9FCEF /* Classes */ = {
@@ -245,13 +256,10 @@
 				7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */,
 				7CED6BDF223DE269002A026A /* LoginView.swift */,
 				7CED6BE1223DEC5D002A026A /* TodayView.swift */,
-				7CED6BE3223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift */,
 				7CED6BE7223DEE47002A026A /* AVACollectionViewCell.swift */,
-				7C8A269022405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift */,
 				7C8A269222405DBD00EF17E0 /* WeeklyScheduleView.swift */,
 				7CF49CEA22407B61004F319E /* ClassDetailViewController.swift */,
 				7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */,
-				7C597E632254CED700D0E3E5 /* TakenSubjectTableViewCell.swift */,
 				7C597E652254D00900D0E3E5 /* HistoryTableViewController.swift */,
 			);
 			path = Views;

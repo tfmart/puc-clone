@@ -10,18 +10,14 @@ import UIKit
 
 class TodayView: UIViewController {
     
-    enum Week: Int {
-        case sunday = 1, monday, tuesday, wednesday, thrusday, friday
-    }
-
-    //Mark: @IBOutlets
+    //MARK: - @IBOutlets
     @IBOutlet weak var todayClassesCollectionView: UICollectionView!
     @IBOutlet weak var avaCollectionView: UICollectionView!
     @IBOutlet weak var amountOfClassesLabel: UILabel!
     @IBOutlet weak var noClassMessageView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var completeScheduleButton: UIButton!
-    //Mark: Vars
+    //MARK: - Vars
     let currentDate = Date()
     var todayClasses = [Schedule]()
     var allClasses = [Schedule]()
@@ -53,7 +49,6 @@ class TodayView: UIViewController {
         self.getTodayClasses()
         self.getCompletedSubjects()
         self.todayClassesCollectionView.reloadData()
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

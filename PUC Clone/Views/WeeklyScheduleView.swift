@@ -71,7 +71,7 @@ extension WeeklyScheduleView: UITableViewDelegate, UITableViewDataSource {
             }
         } else {
             cell.attendanceLabel.text = "Sem dados de presença"
-            cell.attendanceIcon.image = UIImage(named: "Date and Time Detail")
+            cell.attendanceIcon.image = UIImage(named: "No Attendance Info")
         }
         
         return cell

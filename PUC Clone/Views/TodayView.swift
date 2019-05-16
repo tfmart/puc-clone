@@ -102,6 +102,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.attendanceLabel.text = "\(frequencia)% de presença"
             } else {
                 cell.attendanceLabel.text = "Sem dados de presença"
+                cell.attendanceIcon.image = UIImage(named: "No Attendance Info")
             }
             
             cell.routeButton.tag = indexPath.row

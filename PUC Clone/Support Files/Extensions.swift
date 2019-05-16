@@ -162,7 +162,20 @@ extension TodayView {
             }
         })
     }
-    
+}
+
+extension ClassDetailViewController {
+    func getLastAttendanceUpdate(date: String) -> String {
+        let apiDateFormatter = DateFormatter()
+        apiDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        apiDateFormatter.locale = Locale(identifier: "pt_BR")
+        let dateFromAPI = apiDateFormatter.date(from: date)
+        let attendanceDateFormmater = DateFormatter()
+        attendanceDateFormmater.dateFormat = "MMM/y"
+        attendanceDateFormmater.locale = Locale(identifier: "pt_BR")
+        let attendanceDate = attendanceDateFormmater.string(from: dateFromAPI!)
+        return attendanceDate
+    }
 }
 
 extension String {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1025,14 +1025,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Classroom Location" width="2137" height="2138"/>
-        <image name="Description Detail" width="1604" height="2138"/>
-        <image name="Professor Icon" width="1871" height="2138"/>
-        <image name="Route Icon" width="1069" height="1069"/>
-        <image name="Time Icon" width="2071" height="2071"/>
+        <image name="Classroom Location" width="512.8800048828125" height="513.1199951171875"/>
+        <image name="Description Detail" width="385" height="513.1199951171875"/>
+        <image name="Professor Icon" width="449" height="513.1199951171875"/>
+        <image name="Route Icon" width="513.1199951171875" height="513.1199951171875"/>
+        <image name="Time Icon" width="497" height="497"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6n4-Cc-Exd"/>
+        <segue reference="m57-gN-nfv"/>
         <segue reference="fB2-WK-XrM"/>
     </inferredMetricsTieBreakers>
 </document>

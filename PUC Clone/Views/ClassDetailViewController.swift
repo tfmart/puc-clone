@@ -20,14 +20,29 @@ class ClassDetailViewController: UIViewController {
     @IBOutlet weak var classLabel: UILabel!
     
     var selectedClass: Schedule?
+    var lastAttendaceUpdate: NSMutableAttributedString?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if selectedClass?.dataUltimoLancFreq != nil {
+            let attributes = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 12)]
+            lastAttendaceUpdate = NSMutableAttributedString(string: " (atualizado em \(self.getLastAttendanceUpdate(date: selectedClass?.dataUltimoLancFreq ?? "") ))", attributes: attributes)
+        } else {
+            lastAttendaceUpdate = NSMutableAttributedString(string: "")
+        }
+        
         if let currentClass = selectedClass {
+            
+            if currentClass.frequencia == nil{
+                attendanceLabel.text = "Sem dados de frequência"
+            } else {
+                let attendanceString = NSMutableAttributedString(string: "\(currentClass.frequencia ?? 0.0)% (\(currentClass.aulasFreq ?? "") de \(currentClass.aulasDadas ?? ""))")
+                attendanceString.append(lastAttendaceUpdate!)
+                attendanceLabel.attributedText = attendanceString
+            }
             headerLabel.text = currentClass.nomeDisciplina?.formatTitle()
             courseLabel.text = currentClass.nomeCurso?.formatTitle()
-            attendanceLabel.text = "\(currentClass.frequencia ?? 0.0)% (\(currentClass.aulasFreq ?? "") de \(currentClass.aulasDadas ?? ""))"
             dateTimeLabel.text = currentClass.horario
             professorLabel.text = currentClass.professor?.formatTitle()
             locationButton.setTitle("Sala \(currentClass.sala ?? ""), Prédio \(currentClass.predio?.formatTitle() ?? ""), \(currentClass.campus ?? "")", for: .normal)

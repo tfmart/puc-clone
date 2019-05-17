@@ -16,10 +16,10 @@ class DescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         super.navigationItem.title = "Ementa"
-        guard let ementa = classDescription else {
+        guard let description = classDescription else {
             descriptionTextView.text = "Essa matéria não possui ementa"
             return
         }
-        descriptionTextView.text = ementa
+        descriptionTextView.text = description
     }
 }

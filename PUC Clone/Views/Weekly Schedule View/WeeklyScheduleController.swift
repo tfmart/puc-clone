@@ -80,4 +80,42 @@ extension WeeklyScheduleView {
         }
         return todaySubjects
     }
+    
+    func configureTableViewAccesibility(model: WeeklyScheduleTableViewCell, currentClass: Schedule) {
+        var building: String
+        if (currentClass.predio?.hasPrefix("Cent. Tecn"))! {
+            building = "Centro Técnico"
+        } else {
+            building = currentClass.predio!
+        }
+        self.scheduleTableView.isAccessibilityElement = false
+        self.scheduleTableView.shouldGroupAccessibilityChildren = true
+        model.titleLabel.isAccessibilityElement = false
+        model.scheduleLabel.isAccessibilityElement = false
+        model.professorLabel.isAccessibilityElement = false
+        model.classroomLabel.isAccessibilityElement = false
+        model.attendanceLabel.isAccessibilityElement = false
+        model.attendanceIcon.isAccessibilityElement = false
+        model.isAccessibilityElement = true
+        
+        if let attendance = currentClass.frequencia {
+            if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
+                //say Pratica de Formação, but not PF
+            }
+            model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
+        } else {
+            model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
+        }
+
+    }
+    
+    func configureWeekButtonsAccesibility() {
+        self.mondayButton.accessibilityLabel = "Segunda-Feira"
+        self.tuesdayButton.accessibilityLabel = "Terça-Feira"
+        self.wednesdayButton.accessibilityLabel = "Quarta-Feira"
+        self.thrusdayButton.accessibilityLabel = "Quinta-Feira"
+        self.fridayButton.accessibilityLabel = "Sexta-Feira"
+        self.saturdayButton.accessibilityLabel = "Sábado"
+        self.sundayButton.accessibilityLabel = "Domingo"
+    }
 }

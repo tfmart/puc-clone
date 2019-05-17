@@ -112,6 +112,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
             }
             cell.styleTodayViewCell()
+            configure(cellWithModel: cell, currentClass: todayClasses[indexPath.row])
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ava", for: indexPath) as! AVACollectionViewCell

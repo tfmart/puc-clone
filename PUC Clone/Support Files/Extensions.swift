@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension Date{
+extension Date {
     //Formats Title for ScheduleView
     func scheduleDateTitle() -> String?{
         let firstFormatter = DateFormatter()

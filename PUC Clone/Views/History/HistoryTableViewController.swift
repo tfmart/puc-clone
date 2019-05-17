@@ -18,7 +18,6 @@ class HistoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.getCompletedSubjects()
         self.headers = self.headers.getYearsForHeader(classes: self.classes)
         self.formatedData = self.formatedData.formatSubjectsForTable(subjects: self.classes)
     }

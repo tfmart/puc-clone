@@ -30,6 +30,7 @@ class WeeklyScheduleView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureWeekButtonsAccesibility()
         self.noClassView.alpha = 0
         if let dayOfTheWeek = currentDate.getDayOfTheWeek() {
             dayWeek = dayOfTheWeek
@@ -73,7 +74,7 @@ extension WeeklyScheduleView: UITableViewDelegate, UITableViewDataSource {
             cell.attendanceLabel.text = "Sem dados de presença"
             cell.attendanceIcon.image = UIImage(named: "No Attendance Info")
         }
-        
+        configureTableViewAccesibility(model: cell, currentClass: todayClasses[indexPath.row])
         return cell
     }
     

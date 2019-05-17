@@ -52,7 +52,11 @@ extension TodayView {
                 } else {
                     self.noClassMessageView.alpha = 0
                     self.todayClassesCollectionView.alpha = 1
-                    self.headerLabel.text = "Você tem \(self.todayClasses.count) aulas hoje"
+                    if self.todayClasses.count > 1 {
+                        self.headerLabel.text = "Você tem \(self.todayClasses.count) aulas hoje"
+                    } else {
+                        self.headerLabel.text = "Você tem \(self.todayClasses.count) aula hoje"
+                    }
                 }
             }
         })
@@ -65,5 +69,32 @@ extension TodayView {
                 self.hisotry = takenClasses
             }
         })
+    }
+    
+    final func configure(cellWithModel model: TodaysClassesCollectionViewCell, currentClass: Schedule) {
+        var building: String
+        if (currentClass.predio?.hasPrefix("Cent. Tecn"))! {
+            building = "Centro Técnico"
+        } else {
+            building = currentClass.predio!
+        }
+        self.todayClassesCollectionView.isAccessibilityElement = false
+        self.todayClassesCollectionView.shouldGroupAccessibilityChildren = true
+        model.attendanceIcon.isAccessibilityElement = false
+        model.classTitle.isAccessibilityElement = false
+        model.scheduleLabel.isAccessibilityElement = false
+        model.professorLabel.isAccessibilityElement = false
+        model.classroomLabel.isAccessibilityElement = false
+        model.attendanceLabel.isAccessibilityElement = false
+        model.routeButton.isAccessibilityElement = false
+        model.isAccessibilityElement = true
+        if let attendance = currentClass.frequencia {
+            if (model.classTitle.text?.hasPrefix("PF"))! {
+                //say Pratica de Formação, but not PF
+            }
+            model.accessibilityLabel = "\(model.classTitle.text ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
+        } else {
+            model.accessibilityLabel = "\(model.classTitle.text ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
+        }
     }
 }

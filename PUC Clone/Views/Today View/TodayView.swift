@@ -98,8 +98,8 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             cell.scheduleLabel.text = todayClasses[indexPath.row].horario
             cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
             cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"
-            if let frequencia = todayClasses[indexPath.row].frequencia {
-                cell.attendanceLabel.text = "\(frequencia)% de presença"
+            if let attendance = todayClasses[indexPath.row].frequencia {
+                cell.attendanceLabel.text = "\(attendance)% de presença"
             } else {
                 cell.attendanceLabel.text = "Sem dados de presença"
                 cell.attendanceIcon.image = UIImage(named: "No Attendance Info")

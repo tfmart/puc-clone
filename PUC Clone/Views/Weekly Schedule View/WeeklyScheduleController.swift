@@ -100,9 +100,11 @@ extension WeeklyScheduleView {
         
         if let attendance = currentClass.frequencia {
             if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
-                //say Pratica de Formação, but not PF
+                let classTitle = currentClass.nomeDisciplina?.replacingOccurrences(of: "Pf-", with: "Prática de Formação: ")
+                model.accessibilityLabel = "\(classTitle ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
+            } else {
+                model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
             }
-            model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
         } else {
             model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
         }

@@ -35,10 +35,10 @@ extension ClassDetailViewController {
                     attendanceLabel.text = "\(attendance)% (\(attendedClasses) de \(totalClasses)))"
                 }
             } else {
-                attendanceLabel.text = "\(attendance)% de frequencia"
+                attendanceLabel.text = "\(attendance)% de presença"
             }
         } else {
-            attendanceLabel.text = "Sem dados de frequencia"
+            attendanceLabel.text = "Sem dados de presença"
         }
     }
 }

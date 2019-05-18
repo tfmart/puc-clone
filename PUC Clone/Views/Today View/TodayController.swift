@@ -89,12 +89,19 @@ extension TodayView {
         model.routeButton.isAccessibilityElement = false
         model.isAccessibilityElement = true
         if let attendance = currentClass.frequencia {
-            if (model.classTitle.text?.hasPrefix("PF"))! {
-                //say Pratica de Formação, but not PF
+            if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
+                let classTitle = currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: ")
+                model.accessibilityLabel = "\(classTitle ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
+            } else {
+                model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
             }
-            model.accessibilityLabel = "\(model.classTitle.text ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
         } else {
-            model.accessibilityLabel = "\(model.classTitle.text ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
+            if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
+                let classTitle = currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: ")
+                model.accessibilityLabel = "\(classTitle ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
+            } else {
+                model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
+            }
         }
     }
 }

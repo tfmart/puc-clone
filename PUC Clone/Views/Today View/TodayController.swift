@@ -72,36 +72,40 @@ extension TodayView {
     }
     
     final func configure(cellWithModel model: TodaysClassesCollectionViewCell, currentClass: Schedule) {
+        self.todayClassesCollectionView.isAccessibilityElement = false
+        self.todayClassesCollectionView.shouldGroupAccessibilityChildren = true
+        model.titleLabel.isAccessibilityElement = false
+        model.scheduleLabel.isAccessibilityElement = false
+        model.professorLabel.isAccessibilityElement = false
+        model.classroomLabel.isAccessibilityElement = false
+        model.attendanceLabel.isAccessibilityElement = false
+        model.attendanceIcon.isAccessibilityElement = false
+        model.isAccessibilityElement = true
+        
+        var className: String
+        var classAttendance: String
+        var description: String
         var building: String
+        
+        if currentClass.nomeDisciplina!.hasPrefix("PF") {
+            className = (currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: "))!
+        } else {
+            className = currentClass.nomeDisciplina!
+        }
+        
+        if let attendance = currentClass.frequencia {
+            classAttendance = "\(attendance)"
+        } else {
+            classAttendance = "Sem dados de frequência."
+        }
+        
         if (currentClass.predio?.hasPrefix("Cent. Tecn"))! {
             building = "Centro Técnico"
         } else {
             building = currentClass.predio!
         }
-        self.todayClassesCollectionView.isAccessibilityElement = false
-        self.todayClassesCollectionView.shouldGroupAccessibilityChildren = true
-        model.attendanceIcon.isAccessibilityElement = false
-        model.classTitle.isAccessibilityElement = false
-        model.scheduleLabel.isAccessibilityElement = false
-        model.professorLabel.isAccessibilityElement = false
-        model.classroomLabel.isAccessibilityElement = false
-        model.attendanceLabel.isAccessibilityElement = false
-        model.routeButton.isAccessibilityElement = false
-        model.isAccessibilityElement = true
-        if let attendance = currentClass.frequencia {
-            if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
-                let classTitle = currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: ")
-                model.accessibilityLabel = "\(classTitle ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
-            } else {
-                model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
-            }
-        } else {
-            if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
-                let classTitle = currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: ")
-                model.accessibilityLabel = "\(classTitle ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
-            } else {
-                model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
-            }
-        }
+        
+        description = "\(className), das \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). \(classAttendance)"
+        model.accessibilityLabel = description
     }
 }

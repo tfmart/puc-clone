@@ -94,7 +94,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.todayClassesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "todayClass", for: indexPath) as! TodaysClassesCollectionViewCell
-            cell.classTitle.text = todayClasses[indexPath.row].nomeDisciplina?.formatTitle()
+            cell.titleLabel.text = todayClasses[indexPath.row].nomeDisciplina?.formatTitle()
             cell.scheduleLabel.text = todayClasses[indexPath.row].horario
             cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
             cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"

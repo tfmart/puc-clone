@@ -82,12 +82,6 @@ extension WeeklyScheduleView {
     }
     
     func configureTableViewAccesibility(model: WeeklyScheduleTableViewCell, currentClass: Schedule) {
-        var building: String
-        if (currentClass.predio?.hasPrefix("Cent. Tecn"))! {
-            building = "Centro Técnico"
-        } else {
-            building = currentClass.predio!
-        }
         self.scheduleTableView.isAccessibilityElement = false
         self.scheduleTableView.shouldGroupAccessibilityChildren = true
         model.titleLabel.isAccessibilityElement = false
@@ -98,22 +92,31 @@ extension WeeklyScheduleView {
         model.attendanceIcon.isAccessibilityElement = false
         model.isAccessibilityElement = true
         
-        if let attendance = currentClass.frequencia {
-            if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
-                let classTitle = currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: ")
-                model.accessibilityLabel = "\(classTitle ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
-            } else {
-                model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Você possui \(attendance)% de presença nesta matéria"
-            }
+        var className: String
+        var classAttendance: String
+        var description: String
+        var building: String
+        
+        if currentClass.nomeDisciplina!.hasPrefix("PF") {
+            className = (currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: "))!
         } else {
-            if (currentClass.nomeDisciplina!.hasPrefix("PF")) {
-                let classTitle = currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: ")
-                model.accessibilityLabel = "\(classTitle ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
-            } else {
-                model.accessibilityLabel = "\(currentClass.nomeDisciplina ?? ""), às \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). Sem dados de presença."
-            }
+            className = currentClass.nomeDisciplina!
         }
-
+        
+        if let attendance = currentClass.frequencia {
+            classAttendance = "\(attendance)"
+        } else {
+            classAttendance = "Sem dados de frequência."
+        }
+        
+        if (currentClass.predio?.hasPrefix("Cent. Tecn"))! {
+            building = "Centro Técnico"
+        } else {
+            building = currentClass.predio!
+        }
+        
+        description = "\(className), das \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). \(classAttendance)"
+        model.accessibilityLabel = description
     }
     
     func configureWeekButtonsAccesibility() {

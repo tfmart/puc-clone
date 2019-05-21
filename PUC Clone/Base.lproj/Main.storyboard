@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -210,7 +210,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-J4-g8z">
-                                                    <rect key="frame" x="8" y="56.5" width="15" height="16"/>
+                                                    <rect key="frame" x="8" y="56.5" width="15.000000000000455" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="HMT-J4-g8z" secondAttribute="height" multiplier="16:17" id="Fcx-NE-pGA"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="iiN-8A-XX5"/>
@@ -261,11 +261,11 @@
                                         <connections>
                                             <outlet property="attendanceIcon" destination="csg-dO-GSU" id="bc1-NJ-xtf"/>
                                             <outlet property="attendanceLabel" destination="7aJ-ZN-ba5" id="J9Z-dc-7Fe"/>
-                                            <outlet property="classTitle" destination="SjY-Px-hMe" id="cYT-AC-ouI"/>
                                             <outlet property="classroomLabel" destination="dBe-Kx-y1y" id="g7Y-zS-FtO"/>
                                             <outlet property="professorLabel" destination="ov7-7h-Hdh" id="cPh-D7-Edb"/>
                                             <outlet property="routeButton" destination="la1-vk-ihC" id="bjC-2L-BxM"/>
                                             <outlet property="scheduleLabel" destination="47w-pm-sEv" id="yVu-1Z-fOd"/>
+                                            <outlet property="titleLabel" destination="SjY-Px-hMe" id="cYT-AC-ouI"/>
                                             <segue destination="0kx-rg-WvE" kind="show" identifier="detailFromHome" id="fB2-WK-XrM"/>
                                         </connections>
                                     </collectionViewCell>
@@ -521,7 +521,7 @@
                                 <rect key="frame" x="0.0" y="102.5" width="320" height="465.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fullSchedule" rowHeight="134" id="L1W-c8-zAV" customClass="WeeklyScheduleTableViewCell" customModule="PUC_Clone" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fullSchedule" rowHeight="134" id="L1W-c8-zAV" customClass="WeeklyScheduleTableViewCell" customModule="PUC_Clone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L1W-c8-zAV" id="EU6-NT-4zp">
@@ -529,7 +529,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="rac-tb-kKb">
-                                                    <rect key="frame" x="8" y="58" width="16" height="16"/>
+                                                    <rect key="frame" x="8" y="58" width="16.000000000000455" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rac-tb-kKb" secondAttribute="height" multiplier="1:1" id="h4m-oj-BUj"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="rDu-Rs-IfI"/>
@@ -1025,11 +1025,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Classroom Location" width="512.8800048828125" height="513.1199951171875"/>
-        <image name="Description Detail" width="385" height="513.1199951171875"/>
-        <image name="Professor Icon" width="449" height="513.1199951171875"/>
-        <image name="Route Icon" width="513.1199951171875" height="513.1199951171875"/>
-        <image name="Time Icon" width="497" height="497"/>
+        <image name="Classroom Location" width="2137" height="2138"/>
+        <image name="Description Detail" width="1604" height="2138"/>
+        <image name="Professor Icon" width="1871" height="2138"/>
+        <image name="Route Icon" width="1069" height="1069"/>
+        <image name="Time Icon" width="2071" height="2071"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="m57-gN-nfv"/>

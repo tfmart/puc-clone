@@ -9,7 +9,7 @@
 import UIKit
 
 class TodaysClassesCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var classTitle: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scheduleLabel: UILabel!
     @IBOutlet weak var professorLabel: UILabel!
     @IBOutlet weak var classroomLabel: UILabel!

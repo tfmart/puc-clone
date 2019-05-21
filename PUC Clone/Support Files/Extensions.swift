@@ -84,22 +84,7 @@ extension Sequence where Iterator.Element == CompletedTableCell {
             if let firstYear = subjects[0].aass {
                 previousYear = firstYear
                 for subject in subjects {
-                    guard let year = subject.aass else {
-                        return formatedData
-                    }
-                    guard let name = subject.nome else {
-                        return formatedData
-                    }
-                    guard let acceptance = subject.decSitcli else {
-                        return formatedData
-                    }
-                    guard let grade = subject.media else {
-                        return formatedData
-                    }
-                    guard let code = subject.codigo else {
-                        return formatedData
-                    }
-                    guard let hours = subject.cargaHoraria else {
+                    guard let year = subject.aass, let name = subject.nome, let acceptance = subject.decSitcli, let grade = subject.media, let code = subject.codigo, let hours = subject.cargaHoraria else {
                         return formatedData
                     }
                     if subjectsPerYear.isEmpty == false  && previousYear != year{

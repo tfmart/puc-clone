@@ -122,6 +122,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             }
             //Stylying the cell
             cell.styleTodayViewCell()
+            cell.formatAvaTitle()
             
             return cell
         }

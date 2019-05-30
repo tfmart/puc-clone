@@ -53,7 +53,7 @@ extension String {
         formattedString = formattedString.replacingOccurrences(of: " Das ", with: " das ")
         formattedString = formattedString.replacingOccurrences(of: " Na ", with: " na ")
         formattedString = formattedString.replacingOccurrences(of: " No ", with: " no ")
-        formattedString = formattedString.replacingOccurrences(of: " Pf- ", with: " PF - ")
+        formattedString = formattedString.replacingOccurrences(of: "Pf-", with: "PF - ")
         return formattedString
     }
 }

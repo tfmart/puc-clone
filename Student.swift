@@ -21,4 +21,11 @@ class Student: Decodable {
     let situacao: String?
     let periodo: String?
     let sitcli: String?
+    let curso: Curso?
+}
+
+struct Curso: Codable {
+    let codigo, nome, turno: String
+    let grpCur: Int
+    let grpCurDescInterno: String
 }

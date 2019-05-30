@@ -28,11 +28,11 @@ extension ClassDetailViewController {
                 if let lastUpdate = selectedClass?.dataUltimoLancFreq {
                     let attributes = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 12)]
                     let lastUpdateString = NSMutableAttributedString(string: " (atualizado em \(self.getLastAttendanceUpdate(date: lastUpdate)))", attributes: attributes)
-                    let attendanceString = NSMutableAttributedString(string: "\(attendance)% (\(attendedClasses) de \(totalClasses)))")
+                    let attendanceString = NSMutableAttributedString(string: "\(attendance)% (\(attendedClasses) de \(totalClasses))")
                     attendanceString.append(lastUpdateString)
                     attendanceLabel.attributedText = attendanceString
                 } else {
-                    attendanceLabel.text = "\(attendance)% (\(attendedClasses) de \(totalClasses)))"
+                    attendanceLabel.text = "\(attendance)% (\(attendedClasses) de \(totalClasses))"
                 }
             } else {
                 attendanceLabel.text = "\(attendance)% de presença"

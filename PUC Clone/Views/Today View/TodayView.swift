@@ -24,6 +24,7 @@ class TodayView: UIViewController {
     var hisotry = [CompletedSubjects]()
     var pucController = PucController()
     var avaTitles: AvaSite?
+    var student: Student?
     var token: String?
     var routeIndex: Int?
     
@@ -74,6 +75,11 @@ class TodayView: UIViewController {
                 historyView.classes = self.hisotry
             }
         }
+        if segue.identifier == "studentSegue" {
+            if let studentView = segue.destination as? StudentView {
+                studentView.student = self.student
+            }
+        }
     }
 
 }
@@ -98,12 +104,6 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             cell.scheduleLabel.text = todayClasses[indexPath.row].horario
             cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
             cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"
-            if let attendance = todayClasses[indexPath.row].frequencia {
-                cell.attendanceLabel.text = "\(attendance)% de presença"
-            } else {
-                cell.attendanceLabel.text = "Sem dados de presença"
-                cell.attendanceIcon.image = UIImage(named: "No Attendance Info")
-            }
             
             cell.routeButton.tag = indexPath.row
             if pucController.setAttendanceIcon(attendance: todayClasses[indexPath.row].frequencia ?? 0.0) {
@@ -111,6 +111,14 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             } else {
                 cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
             }
+            
+            if let attendance = todayClasses[indexPath.row].frequencia {
+                cell.attendanceLabel.text = "\(attendance)% de presença"
+            } else {
+                cell.attendanceLabel.text = "Sem dados de presença"
+                cell.attendanceIcon.image = UIImage(named: "No Attendance Info")
+            }
+            
             cell.styleTodayViewCell()
             configure(cellWithModel: cell, currentClass: todayClasses[indexPath.row])
             return cell

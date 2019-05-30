@@ -11,6 +11,8 @@ import UIKit
 class LoginView: UIViewController {
     
     let pucController = PucController()
+    var student: Student?
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var raTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
@@ -37,6 +39,7 @@ class LoginView: UIViewController {
                     UserDefaults.standard.set(user, forKey: "ra")
                     UserDefaults.standard.set(password, forKey: "senha")
                     UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                    self.student = student
                     self.performSegue(withIdentifier: "today", sender: nil)
                 } else {
                     UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -45,6 +48,14 @@ class LoginView: UIViewController {
                     self.present(errorAlert, animated: true, completion: nil)                }
             }
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "today" {
+            if let todayView = segue.destination as? StudentView {
+                todayView.student = self.student
+            }
+        }
     }
     
 }

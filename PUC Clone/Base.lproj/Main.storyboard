@@ -381,6 +381,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="C8W-Ta-fqy">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="yvE-Az-dyn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Aluno" id="vIT-WT-2RW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="mH9-k7-nIh" kind="show" identifier="studentSegue" id="Yhx-j0-YDl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="amountOfClassesLabel" destination="Yx2-Jd-R71" id="cGs-Jv-VF5"/>
@@ -416,7 +422,7 @@
         <!--Schedule View Controller-->
         <scene sceneID="wGQ-5k-OSU">
             <objects>
-                <viewController id="coP-a8-YSe" userLabel="Schedule View Controller" customClass="WeeklyScheduleView" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="weeklyView" id="coP-a8-YSe" userLabel="Schedule View Controller" customClass="WeeklyScheduleView" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rp0-K3-d5o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -682,6 +688,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wd2-FL-DO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1912.5" y="1728.1690140845071"/>
+        </scene>
+        <!--Student View-->
+        <scene sceneID="2Rz-nY-rZ1">
+            <objects>
+                <viewController id="mH9-k7-nIh" customClass="StudentView" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oaD-m5-YKv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9L-dy-THr" userLabel="Student Name Label">
+                                <rect key="frame" x="16" y="76" width="288" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURSO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zg-Eb-S3T" userLabel="Course Section Label">
+                                <rect key="frame" x="16" y="129" width="43" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-kX-v1A" userLabel="Course Name Label">
+                                <rect key="frame" x="16" y="148" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERÍODO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7z-0Q-jUa" userLabel="Period Section Label">
+                                <rect key="frame" x="16" y="177" width="54" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCa-a8-0xU" userLabel="Period Label">
+                                <rect key="frame" x="16" y="196" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l9L-dy-THr" firstAttribute="leading" secondItem="QfF-qs-oaL" secondAttribute="leading" constant="16" id="0Z8-xp-ILq"/>
+                            <constraint firstItem="l9L-dy-THr" firstAttribute="top" secondItem="QfF-qs-oaL" secondAttribute="top" constant="12" id="HvA-tA-Efa"/>
+                            <constraint firstItem="d7z-0Q-jUa" firstAttribute="top" secondItem="XTi-kX-v1A" secondAttribute="bottom" constant="8" id="Tea-IH-sAh"/>
+                            <constraint firstItem="XTi-kX-v1A" firstAttribute="leading" secondItem="QfF-qs-oaL" secondAttribute="leading" constant="16" id="XSc-tW-GH4"/>
+                            <constraint firstItem="9zg-Eb-S3T" firstAttribute="leading" secondItem="QfF-qs-oaL" secondAttribute="leading" constant="16" id="ff5-w6-re2"/>
+                            <constraint firstItem="XTi-kX-v1A" firstAttribute="top" secondItem="9zg-Eb-S3T" secondAttribute="bottom" constant="4" id="iqm-8i-nUI"/>
+                            <constraint firstItem="9zg-Eb-S3T" firstAttribute="top" secondItem="l9L-dy-THr" secondAttribute="bottom" constant="24" id="n7m-r1-9s7"/>
+                            <constraint firstItem="d7z-0Q-jUa" firstAttribute="leading" secondItem="QfF-qs-oaL" secondAttribute="leading" constant="16" id="raN-1e-rU4"/>
+                            <constraint firstItem="xCa-a8-0xU" firstAttribute="leading" secondItem="QfF-qs-oaL" secondAttribute="leading" constant="16" id="t5l-7n-3z1"/>
+                            <constraint firstItem="QfF-qs-oaL" firstAttribute="trailing" secondItem="l9L-dy-THr" secondAttribute="trailing" constant="16" id="xjr-3C-d84"/>
+                            <constraint firstItem="xCa-a8-0xU" firstAttribute="top" secondItem="d7z-0Q-jUa" secondAttribute="bottom" constant="4" id="yO3-ih-FHJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QfF-qs-oaL"/>
+                    </view>
+                    <connections>
+                        <outlet property="courseNameLabel" destination="XTi-kX-v1A" id="zux-8m-wbt"/>
+                        <outlet property="nameLabel" destination="l9L-dy-THr" id="5qR-0R-Wyg"/>
+                        <outlet property="periodLabel" destination="xCa-a8-0xU" id="ryk-u7-jhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6J-7i-pKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132.5" y="1007.7464788732394"/>
         </scene>
         <!--History Table View Controller-->
         <scene sceneID="2xT-fu-kr1">
@@ -1032,7 +1103,7 @@
         <image name="Time Icon" width="2071" height="2071"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m57-gN-nfv"/>
+        <segue reference="6n4-Cc-Exd"/>
         <segue reference="fB2-WK-XrM"/>
     </inferredMetricsTieBreakers>
 </document>

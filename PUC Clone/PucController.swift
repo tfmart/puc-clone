@@ -26,7 +26,7 @@ class PucController {
         }
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-        if let url = URL(string: "https://gateway-publico.pucapi.puc-campinas.edu.br/mobile/v3/usuarios/login") {
+        if let url = URL(string: "https://gateway-publico.pucapi.puc-campinas.edu.br/mobile/v3/alunos/autenticado") {
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.setValue("Basic \(authInfo)", forHTTPHeaderField: "Authorization")

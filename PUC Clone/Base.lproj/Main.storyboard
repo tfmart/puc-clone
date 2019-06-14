@@ -91,7 +91,7 @@
                         <outlet property="loginButton" destination="SGi-rf-Ucu" id="Rfi-Qv-YD4"/>
                         <outlet property="passwordTextfield" destination="Q4h-3g-L2G" id="5eM-kJ-gyV"/>
                         <outlet property="raTextfield" destination="UJc-e6-Eha" id="ftx-vO-wbt"/>
-                        <segue destination="7yi-Dc-ztq" kind="showDetail" identifier="today" id="K1C-Ay-ZNr"/>
+                        <segue destination="7yi-Dc-ztq" kind="show" identifier="today" animates="NO" id="K1C-Ay-ZNr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3K-3F-GQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,7 +108,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-P8-d50" userLabel="Blue Background View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
-                                <color key="backgroundColor" red="0.15294117647058825" green="0.43529411764705883" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="Top View"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nCa-P8-d50" secondAttribute="height" multiplier="320:179" id="pTn-WW-bcc"/>
                                 </constraints>
@@ -192,6 +192,7 @@
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Time Icon" translatesAutoresizingMaskIntoConstraints="NO" id="a1c-gg-c9I">
                                                     <rect key="frame" x="8" y="34.5" width="16" height="16"/>
+                                                    <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="a1c-gg-c9I" secondAttribute="height" multiplier="1:1" id="9r8-py-wDu"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="jT5-Ly-exo"/>
@@ -205,6 +206,7 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Classroom Location" translatesAutoresizingMaskIntoConstraints="NO" id="D9D-GB-Tnf">
                                                     <rect key="frame" x="8" y="78.5" width="16" height="16"/>
+                                                    <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="D9D-GB-Tnf" secondAttribute="height" multiplier="1:1" id="0oW-XV-Pp5"/>
                                                         <constraint firstAttribute="height" constant="16" id="QCU-k6-Dfl"/>
@@ -212,6 +214,7 @@
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-J4-g8z">
                                                     <rect key="frame" x="8" y="56.5" width="15" height="16"/>
+                                                    <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="HMT-J4-g8z" secondAttribute="height" multiplier="16:17" id="Fcx-NE-pGA"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="iiN-8A-XX5"/>
@@ -433,12 +436,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKs-PK-KNJ" userLabel="Monday Button">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="38.5"/>
-                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Today Background"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="BKs-PK-KNJ" secondAttribute="height" multiplier="6:5" id="ig8-i9-cmv"/>
                                         </constraints>
                                         <state key="normal" title="Seg">
-                                            <color key="titleColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="Login Title"/>
                                         </state>
                                         <connections>
                                             <action selector="dayWeekButtonPressed:" destination="coP-a8-YSe" eventType="touchUpInside" id="6Cx-Jz-cux"/>
@@ -446,12 +449,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPY-Fg-RjR" userLabel="Tuesday Button">
                                         <rect key="frame" x="46" y="0.0" width="46" height="38.5"/>
-                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Today Background"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XPY-Fg-RjR" secondAttribute="height" multiplier="6:5" id="fLe-Hv-z6Y"/>
                                         </constraints>
                                         <state key="normal" title="Ter">
-                                            <color key="titleColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="Login Title"/>
                                         </state>
                                         <connections>
                                             <action selector="dayWeekButtonPressed:" destination="coP-a8-YSe" eventType="touchUpInside" id="RiL-Aj-LfQ"/>
@@ -459,12 +462,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-nM-znz" userLabel="Wednesday Button">
                                         <rect key="frame" x="92" y="0.0" width="46" height="38.5"/>
-                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Today Background"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="6g3-nM-znz" secondAttribute="height" multiplier="6:5" id="OI7-QU-0GT"/>
                                         </constraints>
                                         <state key="normal" title="Qua">
-                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="Login Title"/>
                                         </state>
                                         <connections>
                                             <action selector="dayWeekButtonPressed:" destination="coP-a8-YSe" eventType="touchUpInside" id="3p5-qc-zej"/>
@@ -472,12 +475,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-Aq-6Qd" userLabel="Thrusday Button">
                                         <rect key="frame" x="138" y="0.0" width="46.5" height="38.5"/>
-                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Today Background"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XaF-Aq-6Qd" secondAttribute="height" multiplier="6:5" id="FDp-fi-yc4"/>
                                         </constraints>
                                         <state key="normal" title="Qui">
-                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="Login Title"/>
                                         </state>
                                         <connections>
                                             <action selector="dayWeekButtonPressed:" destination="coP-a8-YSe" eventType="touchUpInside" id="P3L-Ea-Vi4"/>
@@ -485,12 +488,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMj-WS-FWb" userLabel="Friday Button">
                                         <rect key="frame" x="184.5" y="0.0" width="46" height="38.5"/>
-                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Today Background"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="AMj-WS-FWb" secondAttribute="height" multiplier="6:5" id="XTT-bx-UYX"/>
                                         </constraints>
                                         <state key="normal" title="Sex">
-                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="Login Title"/>
                                         </state>
                                         <connections>
                                             <action selector="dayWeekButtonPressed:" destination="coP-a8-YSe" eventType="touchUpInside" id="f6h-fc-R2T"/>
@@ -498,12 +501,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpv-k0-utF" userLabel="Saturday Button">
                                         <rect key="frame" x="230.5" y="0.0" width="46" height="38.5"/>
-                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Today Background"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Fpv-k0-utF" secondAttribute="height" multiplier="6:5" id="Zpn-Ry-yg2"/>
                                         </constraints>
                                         <state key="normal" title="Sáb">
-                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="Login Title"/>
                                         </state>
                                         <connections>
                                             <action selector="dayWeekButtonPressed:" destination="coP-a8-YSe" eventType="touchUpInside" id="Rar-7n-cH3"/>
@@ -511,12 +514,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuU-77-nsc" userLabel="Sunday Button">
                                         <rect key="frame" x="276.5" y="0.0" width="43.5" height="38.5"/>
-                                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Today Background"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fuU-77-nsc" secondAttribute="height" multiplier="17:15" id="UE0-9x-Pli"/>
                                         </constraints>
                                         <state key="normal" title="Dom">
-                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="Login Title"/>
                                         </state>
                                         <connections>
                                             <action selector="dayWeekButtonPressed:" destination="coP-a8-YSe" eventType="touchUpInside" id="7Cc-FX-bP6"/>
@@ -526,7 +529,8 @@
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" estimatedRowHeight="134" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AWW-gU-tyX">
                                 <rect key="frame" x="0.0" y="82.5" width="320" height="465.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Today Background"/>
+                                <color key="sectionIndexBackgroundColor" name="Today Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fullSchedule" rowHeight="134" id="L1W-c8-zAV" customClass="WeeklyScheduleTableViewCell" customModule="PUC_Clone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="134"/>
@@ -537,6 +541,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="rac-tb-kKb">
                                                     <rect key="frame" x="8" y="57.5" width="16" height="16"/>
+                                                    <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rac-tb-kKb" secondAttribute="height" multiplier="1:1" id="h4m-oj-BUj"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="rDu-Rs-IfI"/>
@@ -574,12 +579,14 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Classroom Location" translatesAutoresizingMaskIntoConstraints="NO" id="M3e-na-BKe" userLabel="Classroom Icon">
                                                     <rect key="frame" x="8" y="81.5" width="16" height="16"/>
+                                                    <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="eZB-Zt-WVE"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Time Icon" translatesAutoresizingMaskIntoConstraints="NO" id="qZu-mh-fnl">
                                                     <rect key="frame" x="8" y="33.5" width="16" height="16"/>
+                                                    <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="qZu-mh-fnl" secondAttribute="height" multiplier="1:1" id="WTP-6Q-TbS"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="wUL-8V-pwD"/>
@@ -592,6 +599,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" name="Cell Background"/>
                                             <constraints>
                                                 <constraint firstItem="M3e-na-BKe" firstAttribute="leading" secondItem="EU6-NT-4zp" secondAttribute="leading" constant="8" id="2JH-yp-TIy"/>
                                                 <constraint firstAttribute="trailing" secondItem="LHY-EG-YZQ" secondAttribute="trailing" constant="4" id="3V2-CK-NV6"/>
@@ -622,6 +630,7 @@
                                                 <constraint firstItem="zNA-Wc-gsj" firstAttribute="top" secondItem="rac-tb-kKb" secondAttribute="bottom" constant="8" id="yD0-6U-eoC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Cell Background"/>
                                         <connections>
                                             <outlet property="attendanceIcon" destination="Q8q-kp-Ne3" id="BTx-ic-ylG"/>
                                             <outlet property="attendanceLabel" destination="Gyb-1t-OP9" id="RJ9-6m-KOn"/>
@@ -762,7 +771,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WtH-3T-riA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Today Background"/>
                         <color key="sectionIndexBackgroundColor" name="Today Background"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="takenSubject" rowHeight="116" id="lne-GS-bKo" customClass="TakenSubjectTableViewCell" customModule="PUC_Clone" customModuleProvider="target">
@@ -1107,6 +1116,9 @@
         <namedColor name="Cell Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Gray Icon">
+            <color red="0.73725490196078436" green="0.74117647058823533" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Login Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1131,9 +1143,12 @@
         <namedColor name="Today Background">
             <color red="0.89399999380111694" green="0.89399999380111694" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Top View">
+            <color red="0.15299999713897705" green="0.43500000238418579" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6n4-Cc-Exd"/>
+        <segue reference="m57-gN-nfv"/>
         <segue reference="WAR-tl-2Ls"/>
     </inferredMetricsTieBreakers>
 </document>

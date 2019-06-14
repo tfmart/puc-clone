@@ -37,6 +37,8 @@ class WeeklyScheduleView: UIViewController {
             self.setUpButtons(dayString: dayOfTheWeek)
             todayClasses = self.todaysSchedule(subjects: allClasses, weekString: dayWeek)
         }
+//        scheduleTableView.tableFooterView = UIView(frame: .zero)
+        scheduleTableView.tableFooterView?.backgroundColor = UIColor(named: "Today Background")
         scheduleTableView.reloadData()
         // Do any additional setup after loading the view.
     }
@@ -67,8 +69,10 @@ extension WeeklyScheduleView: UITableViewDelegate, UITableViewDataSource {
             cell.attendanceLabel.text = "\(attendance)% de presença"
             if pucController.setAttendanceIcon(attendance: attendance) {
                 cell.attendanceIcon.image = UIImage(named: "Good Attendance")
+                cell.attendanceIcon.tintColor = UIColor(named: "Good Attendance")
             } else {
                 cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
+                cell.attendanceIcon.tintColor = UIColor(named: "Bad Attendance")
             }
         } else {
             cell.attendanceLabel.text = "Sem dados de presença"

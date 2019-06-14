@@ -108,8 +108,10 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
             cell.routeButton.tag = indexPath.row
             if pucController.setAttendanceIcon(attendance: todayClasses[indexPath.row].frequencia ?? 0.0) {
                 cell.attendanceIcon.image = UIImage(named: "Good Attendance")
+                cell.attendanceIcon.tintColor = UIColor(named: "Good Attendance")
             } else {
                 cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
+                cell.attendanceIcon.tintColor = UIColor(named: "Bad Attendance")
             }
             
             if let attendance = todayClasses[indexPath.row].frequencia {

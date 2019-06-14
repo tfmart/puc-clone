@@ -218,7 +218,7 @@
 				0AC2BBEA228A0AB100F22314 /* Cells */,
 				7C54A34521FA68B500F6391D /* Info.plist */,
 				7CED6BDE223DE247002A026A /* Views */,
-				7C8CB2D021FCA17B00F9FCEF /* Classes */,
+				7C8CB2D021FCA17B00F9FCEF /* Models */,
 				7C0CB226220E64B900E4F9E2 /* Support Files */,
 				7C54A33D21FA68B200F6391D /* Main.storyboard */,
 				7C54A34B21FA68F800F6391D /* PucController.swift */,
@@ -254,7 +254,7 @@
 			path = "Class Detail";
 			sourceTree = "<group>";
 		};
-		7C8CB2D021FCA17B00F9FCEF /* Classes */ = {
+		7C8CB2D021FCA17B00F9FCEF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7C2A46BA2217537B0066D567 /* Schedule.swift */,
@@ -264,7 +264,7 @@
 				7C8CB2D321FCA1A800F9FCEF /* System.swift */,
 				7C8A268C223EF42D00EF17E0 /* AvaSite.swift */,
 			);
-			name = Classes;
+			name = Models;
 			path = ..;
 			sourceTree = "<group>";
 		};

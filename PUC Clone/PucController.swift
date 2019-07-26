@@ -111,7 +111,8 @@ class PucController {
         }
     }
     
-    //MARK: Get weekly schedule and completed subjects
+    //MARK: Get completed subjects
+    
     func getTakenClasses(callback: @escaping((_ subjects: [CompletedSubjects]) -> Void)) {
         let endpoint = "https://gateway-publico.pucapi.puc-campinas.edu.br/mobile/v3/alunos/disciplinascursadas/"
         let login = UserDefaults.standard.string(forKey: "login")
@@ -141,6 +142,8 @@ class PucController {
             //URL is invalid
         }
     }
+    
+    //MARK: Get weekly schedule
     
     func getWeekSchedule(callback: @escaping((_ subjects: [Schedule]) -> Void)) {
         let endpoint = "https://gateway-publico.pucapi.puc-campinas.edu.br/mobile/v3/alunos/gradehoraria"

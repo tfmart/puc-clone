@@ -7,11 +7,9 @@
 //
 
 import UIKit
+import PuccSwift
 
 class LoginView: UIViewController {
-    
-    let pucController = PucController()
-    var student: Student?
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var raTextfield: UITextField!
@@ -24,6 +22,7 @@ class LoginView: UIViewController {
         passwordTextfield.delegate = self
         raTextfield.delegate = self
     }
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
         self.performLoginSegue()
     }
@@ -31,33 +30,36 @@ class LoginView: UIViewController {
     func performLoginSegue() {
         let user = raTextfield.text ?? ""
         let password = passwordTextfield.text ?? ""
+        let pucConfig = PuccConfiguration(username: user, password: password)
+        
+        if let token = pucConfig.token {
+            UserDefaults.standard.set(token, forKey: "login")
+        }
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        pucController.getLoginToken(username: user, password: password)
-        pucController.initialLogin(callback: {(student) -> Void in
+        PuccService.shared.fetchSession(config: pucConfig) { (response) in
             DispatchQueue.main.async {
-                if student.message == nil {
+                switch response {
+                case .success:
                     UserDefaults.standard.set(user, forKey: "ra")
                     UserDefaults.standard.set(password, forKey: "senha")
                     UIApplication.shared.isNetworkActivityIndicatorVisible = true
-                    self.student = student
                     self.performSegue(withIdentifier: "today", sender: nil)
-                } else {
+                case .failure(.noData):
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                    let errorAlert = UIAlertController(title: "Erro", message: "Não foi possível realizar o seu login. Por favor, tente novamente", preferredStyle: .alert)
+                    errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(errorAlert, animated: true, completion: nil)
+                case .failure(.apiError):
                     UIApplication.shared.isNetworkActivityIndicatorVisible = true
                     let errorAlert = UIAlertController(title: "Credenciais erradas", message: "Verifique o seu RA e sua senha", preferredStyle: .alert)
                     errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    self.present(errorAlert, animated: true, completion: nil)                }
-            }
-        })
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "today" {
-            if let todayView = segue.destination as? StudentView {
-                todayView.student = self.student
+                    self.present(errorAlert, animated: true, completion: nil)
+                default:
+                    print("Error: \(response)")
+                }
             }
         }
     }
-    
 }
 
 extension LoginView: UITextFieldDelegate {

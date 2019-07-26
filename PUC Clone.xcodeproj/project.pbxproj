@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		7C54A35021FA6C1F00F6391D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A34F21FA6C1F00F6391D /* Extensions.swift */; };
 		7C597E642254CED700D0E3E5 /* TakenSubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C597E632254CED700D0E3E5 /* TakenSubjectTableViewCell.swift */; };
 		7C597E662254D00900D0E3E5 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C597E652254D00900D0E3E5 /* HistoryTableViewController.swift */; };
+		7C653A3B22EA71C600AB3944 /* PuccSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C653A3A22EA71C600AB3944 /* PuccSwift */; };
 		7C7706BB228E14E600B5EB1E /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7706BA228E14E600B5EB1E /* TodayController.swift */; };
 		7C7706BE228E159100B5EB1E /* WeeklyScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7706BD228E159100B5EB1E /* WeeklyScheduleController.swift */; };
 		7C7706C1228E15D200B5EB1E /* ClassDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7706C0228E15D200B5EB1E /* ClassDetailController.swift */; };
@@ -28,7 +29,6 @@
 		7C8A269122405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A269022405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift */; };
 		7C8A269322405DBD00EF17E0 /* WeeklyScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A269222405DBD00EF17E0 /* WeeklyScheduleView.swift */; };
 		7C8CB2D421FCA1A800F9FCEF /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D321FCA1A800F9FCEF /* System.swift */; };
-		7C8CB2D621FCA1EF00F9FCEF /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D521FCA1EF00F9FCEF /* Subjects.swift */; };
 		7C8CB2D821FCA2AB00F9FCEF /* CompletedSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */; };
 		7CA2DFE0225AA0C2007FEA8E /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */; };
 		7CC38FB822260ACB00AC193A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC38FB622260ACB00AC193A /* Interface.storyboard */; };
@@ -114,7 +114,6 @@
 		7C8A269022405C7E00EF17E0 /* WeeklyScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		7C8A269222405DBD00EF17E0 /* WeeklyScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyScheduleView.swift; sourceTree = "<group>"; };
 		7C8CB2D321FCA1A800F9FCEF /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
-		7C8CB2D521FCA1EF00F9FCEF /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedSubjects.swift; sourceTree = "<group>"; };
 		7CA2DFDF225AA0C2007FEA8E /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		7CC38FB422260ACB00AC193A /* Puc Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puc Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C653A3B22EA71C600AB3944 /* PuccSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +260,6 @@
 				7C2A46BA2217537B0066D567 /* Schedule.swift */,
 				7C54A34D21FA6AC800F6391D /* Student.swift */,
 				7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */,
-				7C8CB2D521FCA1EF00F9FCEF /* Subjects.swift */,
 				7C8CB2D321FCA1A800F9FCEF /* System.swift */,
 				7C8A268C223EF42D00EF17E0 /* AvaSite.swift */,
 			);
@@ -359,6 +358,9 @@
 				7CC38FD022260ACD00AC193A /* PBXTargetDependency */,
 			);
 			name = "PUC Clone";
+			packageProductDependencies = (
+				7C653A3A22EA71C600AB3944 /* PuccSwift */,
+			);
 			productName = "PUC Clone";
 			productReference = 7C54A33621FA68B200F6391D /* PUC Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -430,6 +432,9 @@
 				Base,
 			);
 			mainGroup = 7C54A32D21FA68B200F6391D;
+			packageReferences = (
+				7C653A3922EA71C600AB3944 /* XCRemoteSwiftPackageReference "PuccSwift" */,
+			);
 			productRefGroup = 7C54A33721FA68B200F6391D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -476,7 +481,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C8CB2D621FCA1EF00F9FCEF /* Subjects.swift in Sources */,
 				7CED6BE4223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift in Sources */,
 				7CF49CEB22407B61004F319E /* ClassDetailView.swift in Sources */,
 				7C3C4A44229619C300976308 /* StudentView.swift in Sources */,
@@ -834,6 +838,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C653A3922EA71C600AB3944 /* XCRemoteSwiftPackageReference "PuccSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tfmart/PuccSwift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C653A3A22EA71C600AB3944 /* PuccSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C653A3922EA71C600AB3944 /* XCRemoteSwiftPackageReference "PuccSwift" */;
+			productName = PuccSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C54A32E21FA68B200F6391D /* Project object */;
 }

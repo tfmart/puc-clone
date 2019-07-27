@@ -11,24 +11,29 @@ import UIKit
 class StudentView: UIViewController {
     
     var student: Student?
+    var pucController = PucController()
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
     
+    //https://gateway-publico.pucapi.puc-campinas.edu.br/mobile/v3/alunos/autenticado
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let student = student {
-            nameLabel.text = student.nome
-            courseNameLabel.text = student.curso?.nome
-            periodLabel.text = student.curso?.turno
-        } else {
-            nameLabel.text = "Nenhum aluno encontrado"
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        pucController.initialLogin { (student) in
+            DispatchQueue.main.async {
+                self.nameLabel.text = student.nome
+                self.courseNameLabel.text = student.curso?.nome
+                self.periodLabel.text = student.periodo
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
         }
     }
     
-
-    
-
+    func studentError() {
+        nameLabel.text = "Nenhum aluno encontrado"
+    }
 }

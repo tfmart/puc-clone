@@ -24,13 +24,31 @@ class LoginView: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        self.performLoginSegue()
+        self.loginButtonAction()
     }
     
-    func performLoginSegue() {
-        let user = raTextfield.text ?? ""
-        let password = passwordTextfield.text ?? ""
-        let pucConfig = PuccConfiguration(username: user, password: password)
+    fileprivate func performLogin(username: String, password: String) {
+        UserDefaults.standard.set(username, forKey: "ra")
+        UserDefaults.standard.set(password, forKey: "senha")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        self.performSegue(withIdentifier: "today", sender: nil)
+    }
+    
+    fileprivate func showErrorAlert(error: APIServiceError) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let errorAlert = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
+        errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(errorAlert, animated: true, completion: nil)
+    }
+    
+    func loginButtonAction() {
+        guard let username = raTextfield.text, let password = passwordTextfield.text else {
+            let errorAlert = UIAlertController(title: "Erro", message: "Por favor, preencha ambos os campos", preferredStyle: .alert)
+            errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(errorAlert, animated: true, completion: nil)
+            return
+        }
+        let pucConfig = PuccConfiguration(username: username, password: password)
         
         if let token = pucConfig.token {
             UserDefaults.standard.set(token, forKey: "login")
@@ -40,33 +58,24 @@ class LoginView: UIViewController {
             DispatchQueue.main.async {
                 switch response {
                 case .success:
-                    UserDefaults.standard.set(user, forKey: "ra")
-                    UserDefaults.standard.set(password, forKey: "senha")
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-                    self.performSegue(withIdentifier: "today", sender: nil)
+                    self.performLogin(username: username, password: password)
                 case .failure(.noData):
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-                    let errorAlert = UIAlertController(title: "Erro", message: "Não foi possível realizar o seu login. Por favor, tente novamente", preferredStyle: .alert)
-                    errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    self.present(errorAlert, animated: true, completion: nil)
+                    self.showErrorAlert(error: .noData)
                 case .failure(.apiError):
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-                    let errorAlert = UIAlertController(title: "Credenciais erradas", message: "Verifique o seu RA e sua senha", preferredStyle: .alert)
-                    errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    self.present(errorAlert, animated: true, completion: nil)
+                    self.showErrorAlert(error: .apiError)
                 default:
                     print("Error: \(response)")
                 }
             }
         }
     }
-}
+ç}
 
 extension LoginView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if loginButton.isEnabled {
-            performLoginSegue()
+            loginButtonAction()
         }
         return true
     }

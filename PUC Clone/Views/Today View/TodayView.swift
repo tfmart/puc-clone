@@ -17,6 +17,7 @@ class TodayView: UIViewController {
     @IBOutlet weak var noClassMessageView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var completeScheduleButton: UIButton!
+    
     //MARK: - Vars
     let currentDate = Date()
     var todayClasses = [Schedule]()

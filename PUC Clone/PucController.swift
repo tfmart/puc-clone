@@ -53,7 +53,7 @@ class PucController {
         }
     }
     
-    //MARK: Authentication on AVA"s API
+    //MARK: Authentication on AVA's API
     
     func getSakaiSessionToken(callback: @escaping ((_ token: String) -> Void)) {
         guard let username = UserDefaults.standard.string(forKey: "ra") else {

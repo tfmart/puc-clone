@@ -31,14 +31,17 @@
                                     <action selector="loginButtonPressed:" destination="kau-bo-5Tl" eventType="touchUpInside" id="MJq-KW-gV9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e1-84-S9D" userLabel="Title Label">
-                                <rect key="frame" x="24" y="36" width="272" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8e1-84-S9D" userLabel="Title Label">
+                                <rect key="frame" x="24" y="36" width="172" height="51"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <color key="textColor" name="Login Title"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entre com o seu login da PUC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA3-bT-eTi" userLabel="Subtitle Label">
-                                <rect key="frame" x="24" y="87" width="272" height="21"/>
+                                <rect key="frame" x="24" y="95" width="272" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" name="Login Subtitle"/>
                                 <nil key="highlightedColor"/>
@@ -51,14 +54,14 @@
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJc-e6-Eha" userLabel="RA Text Field">
-                                <rect key="frame" x="24" y="200" width="272" height="34"/>
+                                <rect key="frame" x="24" y="208" width="272" height="34"/>
                                 <color key="backgroundColor" name="Text Field Background"/>
                                 <color key="textColor" name="Text Field Label"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartInsertDeleteType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4h-3g-L2G" userLabel="Password Text Field">
-                                <rect key="frame" x="24" y="258" width="272" height="34"/>
+                                <rect key="frame" x="24" y="266" width="272" height="34"/>
                                 <color key="backgroundColor" name="Text Field Background"/>
                                 <color key="textColor" name="Text Field Label"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -69,9 +72,9 @@
                         <constraints>
                             <constraint firstItem="qA3-bT-eTi" firstAttribute="top" secondItem="8e1-84-S9D" secondAttribute="bottom" constant="8" id="0br-IH-EVy"/>
                             <constraint firstItem="SGi-rf-Ucu" firstAttribute="leading" secondItem="S3s-3x-96V" secondAttribute="leading" constant="24" id="2Up-9y-pGS"/>
-                            <constraint firstItem="8e1-84-S9D" firstAttribute="centerX" secondItem="lV8-l7-lIz" secondAttribute="centerX" id="59x-up-Lt5"/>
                             <constraint firstItem="Q4h-3g-L2G" firstAttribute="top" secondItem="UJc-e6-Eha" secondAttribute="bottom" constant="24" id="7Hu-ve-hub"/>
                             <constraint firstItem="Q4h-3g-L2G" firstAttribute="centerX" secondItem="lV8-l7-lIz" secondAttribute="centerX" id="M4A-l6-alh"/>
+                            <constraint firstItem="S3s-3x-96V" firstAttribute="trailing" secondItem="8e1-84-S9D" secondAttribute="trailing" constant="124" id="Ps8-8y-y36"/>
                             <constraint firstItem="S3s-3x-96V" firstAttribute="bottom" secondItem="gDW-js-tUs" secondAttribute="bottom" constant="38" id="QCz-Aq-IB0"/>
                             <constraint firstItem="qA3-bT-eTi" firstAttribute="centerX" secondItem="lV8-l7-lIz" secondAttribute="centerX" id="Qqw-Kd-a6u"/>
                             <constraint firstItem="UJc-e6-Eha" firstAttribute="leading" secondItem="S3s-3x-96V" secondAttribute="leading" constant="24" id="Rwp-g9-jrT"/>
@@ -91,19 +94,19 @@
                         <outlet property="loginButton" destination="SGi-rf-Ucu" id="Rfi-Qv-YD4"/>
                         <outlet property="passwordTextfield" destination="Q4h-3g-L2G" id="5eM-kJ-gyV"/>
                         <outlet property="raTextfield" destination="UJc-e6-Eha" id="ftx-vO-wbt"/>
-                        <segue destination="7yi-Dc-ztq" kind="show" identifier="today" animates="NO" id="K1C-Ay-ZNr"/>
+                        <segue destination="7yi-Dc-ztq" kind="presentation" identifier="today" animates="NO" modalPresentationStyle="fullScreen" id="K1C-Ay-ZNr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3K-3F-GQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-609" y="1731"/>
+            <point key="canvasLocation" x="-610.14492753623188" y="1730.3571428571429"/>
         </scene>
         <!--Today View Controller-->
         <scene sceneID="VWy-aZ-MX6">
             <objects>
                 <viewController id="VEo-cI-ltv" userLabel="Today View Controller" customClass="TodayView" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="407-RG-x3k">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-P8-d50" userLabel="Blue Background View">
@@ -123,7 +126,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Cell Background"/>
                                 <constraints>
                                     <constraint firstItem="Rak-yM-v5D" firstAttribute="centerX" secondItem="i6r-zY-Vmf" secondAttribute="centerX" id="AcW-t7-cid"/>
                                     <constraint firstAttribute="width" secondItem="i6r-zY-Vmf" secondAttribute="height" multiplier="80:21" id="Ymy-Ms-Pb4"/>
@@ -366,6 +369,7 @@
                             <constraint firstItem="OkC-em-NL1" firstAttribute="top" secondItem="S3m-av-Hul" secondAttribute="bottom" id="HqG-qE-WWt"/>
                             <constraint firstItem="ckS-An-RKp" firstAttribute="trailing" secondItem="S3m-av-Hul" secondAttribute="trailing" constant="4" id="JdS-2q-Web"/>
                             <constraint firstItem="Yx2-Jd-R71" firstAttribute="top" secondItem="ckS-An-RKp" secondAttribute="top" constant="16" id="JoU-mw-ybr"/>
+                            <constraint firstItem="GVv-PU-1bT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ckS-An-RKp" secondAttribute="leading" symbolic="YES" id="QHH-Np-gtq"/>
                             <constraint firstItem="nCa-P8-d50" firstAttribute="leading" secondItem="ckS-An-RKp" secondAttribute="leading" id="VRK-Vj-fwk"/>
                             <constraint firstItem="nCa-P8-d50" firstAttribute="trailing" secondItem="ckS-An-RKp" secondAttribute="trailing" id="Vhu-4Y-Ls5"/>
                             <constraint firstItem="i6r-zY-Vmf" firstAttribute="centerY" secondItem="UnI-LE-ull" secondAttribute="centerY" id="ZhR-jc-xts"/>
@@ -410,6 +414,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7yi-Dc-ztq" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vG4-Df-ynd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ItF-lc-uqU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -428,7 +433,7 @@
             <objects>
                 <viewController storyboardIdentifier="weeklyView" id="coP-a8-YSe" userLabel="Schedule View Controller" customClass="WeeklyScheduleView" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rp0-K3-d5o">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thj-29-sIe">
@@ -528,7 +533,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" estimatedRowHeight="134" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AWW-gU-tyX">
-                                <rect key="frame" x="0.0" y="82.5" width="320" height="465.5"/>
+                                <rect key="frame" x="0.0" y="82.5" width="320" height="485.5"/>
                                 <color key="backgroundColor" name="Today Background"/>
                                 <color key="sectionIndexBackgroundColor" name="Today Background"/>
                                 <prototypes>
@@ -648,10 +653,10 @@
                                 </connections>
                             </tableView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfe-ra-W9T">
-                                <rect key="frame" x="0.0" y="82.5" width="320" height="465.5"/>
+                                <rect key="frame" x="0.0" y="82.5" width="320" height="485.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sem aulas nesse dia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n93-ze-gTI">
-                                        <rect key="frame" x="82.5" y="222.5" width="155.5" height="20.5"/>
+                                        <rect key="frame" x="82.5" y="232.5" width="155.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -704,7 +709,7 @@
             <objects>
                 <viewController id="mH9-k7-nIh" customClass="StudentView" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oaD-m5-YKv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9L-dy-THr" userLabel="Student Name Label">
@@ -769,7 +774,7 @@
             <objects>
                 <tableViewController id="EQa-OO-jya" customClass="HistoryTableViewController" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WtH-3T-riA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Today Background"/>
                         <color key="sectionIndexBackgroundColor" name="Today Background"/>
@@ -857,7 +862,7 @@
             <objects>
                 <viewController storyboardIdentifier="classDetail" id="0kx-rg-WvE" customClass="ClassDetailViewController" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z3o-ur-FZe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vxa-SE-fcR" userLabel="Name Label">
@@ -929,31 +934,31 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CÓDIGO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erw-jm-4mC" userLabel="Code Header">
-                                <rect key="frame" x="135" y="466" width="50" height="14.5"/>
+                                <rect key="frame" x="135" y="486" width="50" height="14.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSW-P8-rdJ" userLabel="Code Label">
-                                <rect key="frame" x="139.5" y="484.5" width="41.5" height="19.5"/>
+                                <rect key="frame" x="139.5" y="504.5" width="41.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TURMA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnI-Hi-i6B" userLabel="Class Header">
-                                <rect key="frame" x="30" y="465.5" width="45.5" height="15"/>
+                                <rect key="frame" x="30" y="485.5" width="45.5" height="15"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFx-GA-IR4" userLabel="Class Label">
-                                <rect key="frame" x="32" y="484.5" width="41.5" height="19.5"/>
+                                <rect key="frame" x="32" y="504.5" width="41.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBj-EZ-jVp" userLabel="Detail Icon">
-                                <rect key="frame" x="256" y="463" width="17" height="22"/>
+                                <rect key="frame" x="256" y="483" width="17" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IBj-EZ-jVp" secondAttribute="height" multiplier="17:22" id="Th8-sa-WdD"/>
                                     <constraint firstAttribute="height" constant="22" id="o40-IJ-pg2"/>
@@ -964,7 +969,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tK2-CI-pya" userLabel="Detail Buton">
-                                <rect key="frame" x="239" y="481" width="51" height="27"/>
+                                <rect key="frame" x="239" y="501" width="51" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="EMENTA">
                                     <color key="titleColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
@@ -1045,11 +1050,11 @@
             <objects>
                 <viewController id="Gb2-Rx-voV" userLabel="Class Description View Controller" customClass="DescriptionViewController" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1p6-Pv-qpY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9El-1S-NfE">
-                                <rect key="frame" x="0.0" y="44" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" name="Login Background"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" name="Text Field Label"/>
@@ -1079,11 +1084,11 @@
             <objects>
                 <viewController id="lTD-mw-Obz" customClass="ClassroomLocationViewController" customModule="PUC_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tEO-9D-JJo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1E-X7-tyz">
-                                <rect key="frame" x="0.0" y="44" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <connections>
                                     <outlet property="delegate" destination="lTD-mw-Obz" id="mAE-WR-U9b"/>
                                 </connections>
@@ -1148,7 +1153,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m57-gN-nfv"/>
-        <segue reference="WAR-tl-2Ls"/>
+        <segue reference="6n4-Cc-Exd"/>
+        <segue reference="fB2-WK-XrM"/>
     </inferredMetricsTieBreakers>
 </document>

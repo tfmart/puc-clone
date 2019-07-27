@@ -40,6 +40,7 @@ class HistoryTableViewController: UITableViewController {
         cell.gradeLabel.text = self.formatedData[indexPath.section].subjects![indexPath.row].grade
         cell.statusLabel.text = self.formatedData[indexPath.section].subjects![indexPath.row].acceptance
         cell.codeLabel.text = self.formatedData[indexPath.section].subjects![indexPath.row].code
+        cell.codeLabel.layer.cornerRadius = 8.0
         cell.totalHoursLabel.text = "\(self.formatedData[indexPath.section].subjects![indexPath.row].hours ?? "") horas de aula"
         return cell
     }

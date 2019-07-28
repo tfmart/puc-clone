@@ -10,10 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //To change Navigation Bar Background Color
@@ -23,7 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //To change Navigation Bar Title Color
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        //Set back button text
+        
+        #if DEBUG
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "todayView")
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        #else
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginView")
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        #endif
+        
         return true
     }
 

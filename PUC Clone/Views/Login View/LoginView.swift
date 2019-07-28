@@ -69,7 +69,7 @@ class LoginView: UIViewController {
             }
         }
     }
-ç}
+}
 
 extension LoginView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

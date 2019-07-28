@@ -17,7 +17,7 @@ class DescriptionViewController: UIViewController {
         super.viewDidLoad()
         super.navigationItem.title = "Ementa"
         guard let description = classDescription else {
-            descriptionTextView.text = "Essa matéria não possui ementa"
+            descriptionTextView.text = "Essa disciplina não possui ementa"
             return
         }
         descriptionTextView.text = description

@@ -34,6 +34,22 @@ extension TodayView {
         return day
     }
     
+    fileprivate func setClassesView() {
+        if self.todayClasses.count == 0 {
+            self.noClassMessageView.alpha = 1
+            self.todayClassesCollectionView.alpha = 0
+            self.headerLabel.text = "Você não tem aula hoje"
+        } else {
+            self.noClassMessageView.alpha = 0
+            self.todayClassesCollectionView.alpha = 1
+            if self.todayClasses.count > 1 {
+                self.headerLabel.text = "Você tem \(self.todayClasses.count) aulas hoje"
+            } else {
+                self.headerLabel.text = "Você tem \(self.todayClasses.count) aula hoje"
+            }
+        }
+    }
+    
     func getTodayClasses() {
         let today = self.getDayOfWeek()
         pucController.getWeekSchedule(callback: {(weeklySchedule) -> Void in
@@ -45,19 +61,7 @@ extension TodayView {
                     }
                 }
                 self.todayClassesCollectionView.reloadData()
-                if self.todayClasses.count == 0 {
-                    self.noClassMessageView.alpha = 1
-                    self.todayClassesCollectionView.alpha = 0
-                    self.headerLabel.text = "Você não tem aula hoje"
-                } else {
-                    self.noClassMessageView.alpha = 0
-                    self.todayClassesCollectionView.alpha = 1
-                    if self.todayClasses.count > 1 {
-                        self.headerLabel.text = "Você tem \(self.todayClasses.count) aulas hoje"
-                    } else {
-                        self.headerLabel.text = "Você tem \(self.todayClasses.count) aula hoje"
-                    }
-                }
+                self.setClassesView()
             }
         })
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -107,5 +111,18 @@ extension TodayView {
         
         description = "\(className), das \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). \(classAttendance)"
         model.accessibilityLabel = description
+    }
+    
+    func getDemoClasses() {
+        let today = self.getDayOfWeek()
+        let demoController = DemoController()
+        self.allClasses = demoController.load("ScheduleData.json")
+        for schedule in allClasses {
+            if schedule.diaSemana == today {
+                self.todayClasses.append(schedule)
+            }
+            self.todayClassesCollectionView.reloadData()
+            self.setClassesView()
+        }
     }
 }

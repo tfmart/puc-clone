@@ -48,8 +48,12 @@ class TodayView: UIViewController {
         self.styleNoClassView()
         self.styleScheduleButton()
         super.navigationItem.title = currentDate.scheduleDateTitle()
+        #if DEBUG
+        self.getDemoClasses()
+        #else
         self.getTodayClasses()
         self.getCompletedSubjects()
+        #endif
         self.todayClassesCollectionView.reloadData()
     }
     

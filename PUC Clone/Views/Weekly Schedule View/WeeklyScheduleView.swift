@@ -68,15 +68,16 @@ extension WeeklyScheduleView: UITableViewDelegate, UITableViewDataSource {
         if let attendance = todayClasses[indexPath.row].frequencia {
             cell.attendanceLabel.text = "\(attendance)% de presença"
             if pucController.setAttendanceIcon(attendance: attendance) {
-                cell.attendanceIcon.image = UIImage(named: "Good Attendance")
+                cell.attendanceIcon.image = UIImage(named: "Good")
                 cell.attendanceIcon.tintColor = UIColor(named: "Good Attendance")
             } else {
-                cell.attendanceIcon.image = UIImage(named: "Bad Attendance")
+                cell.attendanceIcon.image = UIImage(named: "Bad")
                 cell.attendanceIcon.tintColor = UIColor(named: "Bad Attendance")
             }
         } else {
             cell.attendanceLabel.text = "Sem dados de presença"
             cell.attendanceIcon.image = UIImage(named: "No Attendance Info")
+            cell.attendanceIcon.tintColor = UIColor(named: "Gray Icon")
         }
         configureTableViewAccesibility(model: cell, currentClass: todayClasses[indexPath.row])
         return cell

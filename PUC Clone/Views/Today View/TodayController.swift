@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PuccSwift
 
 extension TodayView {
     func getDayOfWeek() -> Int {
@@ -52,18 +53,36 @@ extension TodayView {
     
     func getTodayClasses() {
         let today = self.getDayOfWeek()
-        pucController.getWeekSchedule(callback: {(weeklySchedule) -> Void in
+        let config = PuccConfiguration(username: "16111312", password: "QPW49!@V")
+        let requester = ScheduleRequester(configuration: config) { (schedule, error) in
+            guard let schedule = schedule else {
+                print("Failed to get schedule")
+                return
+            }
             DispatchQueue.main.async {
-                self.allClasses = weeklySchedule
-                for schedule in weeklySchedule {
-                    if schedule.diaSemana == today {
-                        self.todayClasses.append(schedule)
+                self.allClasses = schedule
+                for subject in schedule {
+                    if subject.diaSemana == today {
+                        self.todayClasses.append(subject)
                     }
                 }
                 self.todayClassesCollectionView.reloadData()
                 self.setClassesView()
             }
-        })
+        }
+        requester.request()
+//        pucController.getWeekSchedule(callback: {(weeklySchedule) -> Void in
+//            DispatchQueue.main.async {
+//                self.allClasses = weeklySchedule
+//                for schedule in weeklySchedule {
+//                    if schedule.diaSemana == today {
+//                        self.todayClasses.append(schedule)
+//                    }
+//                }
+//                self.todayClassesCollectionView.reloadData()
+//                self.setClassesView()
+//            }
+//        })
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     

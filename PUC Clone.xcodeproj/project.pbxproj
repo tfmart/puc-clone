@@ -10,7 +10,6 @@
 		7C106A4822EDE7320039A60D /* ScheduleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C106A4722EDE7320039A60D /* ScheduleData.json */; };
 		7C106A4A22EDE7E40039A60D /* DemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C106A4922EDE7E40039A60D /* DemoController.swift */; };
 		7C2079EB22486419006485C0 /* ClassroomLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */; };
-		7C2A46BB2217537B0066D567 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A46BA2217537B0066D567 /* Schedule.swift */; };
 		7C3C4A44229619C300976308 /* StudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3C4A43229619C300976308 /* StudentView.swift */; };
 		7C4977792279FACB00286045 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4977782279FACB00286045 /* Style.swift */; };
 		7C54A33A21FA68B200F6391D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54A33921FA68B200F6391D /* AppDelegate.swift */; };
@@ -93,10 +92,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7C106A4722EDE7320039A60D /* ScheduleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ScheduleData.json; path = ../../../../../../Desktop/ScheduleData.json; sourceTree = "<group>"; };
-		7C106A4922EDE7E40039A60D /* DemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DemoController.swift; path = "../../../../../../../../System/Volumes/Data/Users/tomasmartins/Documents/Xcode Projects/PUC Clone/PUC Clone/Support Files/Demo Files/DemoController.swift"; sourceTree = "<group>"; };
+		7C106A4722EDE7320039A60D /* ScheduleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ScheduleData.json; sourceTree = "<group>"; };
+		7C106A4922EDE7E40039A60D /* DemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoController.swift; sourceTree = "<group>"; };
 		7C2079EA22486419006485C0 /* ClassroomLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomLocationViewController.swift; sourceTree = "<group>"; };
-		7C2A46BA2217537B0066D567 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		7C3C4A43229619C300976308 /* StudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentView.swift; sourceTree = "<group>"; };
 		7C4977782279FACB00286045 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		7C54A33621FA68B200F6391D /* PUC Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PUC Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,7 +269,6 @@
 		7C8CB2D021FCA17B00F9FCEF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7C2A46BA2217537B0066D567 /* Schedule.swift */,
 				7C54A34D21FA6AC800F6391D /* Student.swift */,
 				7C8CB2D721FCA2AB00F9FCEF /* CompletedSubjects.swift */,
 				7C8CB2D321FCA1A800F9FCEF /* System.swift */,
@@ -499,7 +496,6 @@
 				7CED6BE4223DEE1C002A026A /* TodaysClassesCollectionViewCell.swift in Sources */,
 				7CF49CEB22407B61004F319E /* ClassDetailView.swift in Sources */,
 				7C3C4A44229619C300976308 /* StudentView.swift in Sources */,
-				7C2A46BB2217537B0066D567 /* Schedule.swift in Sources */,
 				7C106A4A22EDE7E40039A60D /* DemoController.swift in Sources */,
 				7C54A35021FA6C1F00F6391D /* Extensions.swift in Sources */,
 				7C8CB2D821FCA2AB00F9FCEF /* CompletedSubjects.swift in Sources */,

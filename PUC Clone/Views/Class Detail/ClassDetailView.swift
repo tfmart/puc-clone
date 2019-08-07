@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PuccSwift
 
 class ClassDetailViewController: UIViewController {
 

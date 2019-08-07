@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PuccSwift
 
 class WeeklyScheduleView: UIViewController {
     
@@ -37,10 +38,8 @@ class WeeklyScheduleView: UIViewController {
             self.setUpButtons(dayString: dayOfTheWeek)
             todayClasses = self.todaysSchedule(subjects: allClasses, weekString: dayWeek)
         }
-//        scheduleTableView.tableFooterView = UIView(frame: .zero)
         scheduleTableView.tableFooterView?.backgroundColor = UIColor(named: "Today Background")
         scheduleTableView.reloadData()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func dayWeekButtonPressed(_ sender: UIButton) {

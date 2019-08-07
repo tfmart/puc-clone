@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PuccSwift
 
 extension WeeklyScheduleView {
     func setUpButtons(dayString: String) {

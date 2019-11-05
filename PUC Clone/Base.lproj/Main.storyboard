@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kau-bo-5Tl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -213,7 +213,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-J4-g8z">
-                                                    <rect key="frame" x="8" y="56.5" width="15" height="16"/>
+                                                    <rect key="frame" x="8" y="56.5" width="15.000000000000227" height="16"/>
                                                     <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="HMT-J4-g8z" secondAttribute="height" multiplier="16:17" id="Fcx-NE-pGA"/>
@@ -538,11 +538,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L1W-c8-zAV" id="EU6-NT-4zp">
-                                            <rect key="frame" x="0.0" y="0.0" width="382.5" height="134"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Professor Icon" translatesAutoresizingMaskIntoConstraints="NO" id="rac-tb-kKb">
-                                                    <rect key="frame" x="8" y="57.5" width="16" height="16"/>
+                                                    <rect key="frame" x="8" y="57.5" width="16.000000000000227" height="16"/>
                                                     <color key="tintColor" name="Gray Icon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rac-tb-kKb" secondAttribute="height" multiplier="1:1" id="h4m-oj-BUj"/>
@@ -550,31 +550,31 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="professor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-Rq-MO2" userLabel="Professor Label">
-                                                    <rect key="frame" x="28" y="55.5" width="350.5" height="20"/>
+                                                    <rect key="frame" x="28" y="55.5" width="351" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" name="Schedule Subtitle"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-y7-yyT" userLabel="Schedule Label">
-                                                    <rect key="frame" x="28" y="33.5" width="350.5" height="16"/>
+                                                    <rect key="frame" x="28" y="33.5" width="351" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" name="Schedule Subtitle"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHY-EG-YZQ" userLabel="Title Label">
-                                                    <rect key="frame" x="8" y="6" width="370.5" height="21.5"/>
+                                                    <rect key="frame" x="8" y="6" width="371" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" name="Schedule Title"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="classroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-Wc-gsj" userLabel="Classroom Label">
-                                                    <rect key="frame" x="28" y="81.5" width="350.5" height="17"/>
+                                                    <rect key="frame" x="28" y="81.5" width="351" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" name="Schedule Subtitle"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="attendance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyb-1t-OP9" userLabel="Attendance Label">
-                                                    <rect key="frame" x="28" y="105.5" width="350.5" height="17"/>
+                                                    <rect key="frame" x="28" y="105.5" width="351" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" name="Schedule Subtitle"/>
                                                     <color key="highlightedColor" red="0.4431372549" green="0.43921568630000002" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>

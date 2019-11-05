@@ -23,9 +23,9 @@ extension ClassDetailViewController {
     }
     
     func setAttendanceLabel() {
-        if let attendance = selectedClass?.frequencia {
-            if let attendedClasses = selectedClass?.aulasFreq, let totalClasses = selectedClass?.aulasDadas {
-                if let lastUpdate = selectedClass?.dataUltimoLancFreq {
+        if let attendance = selectedClass?.attendance {
+            if let attendedClasses = selectedClass?.attendedClasses, let totalClasses = selectedClass?.amountClasses {
+                if let lastUpdate = selectedClass?.lastAttendanceUpdate {
                     let attributes = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 12)]
                     let lastUpdateString = NSMutableAttributedString(string: " (atualizado em \(self.getLastAttendanceUpdate(date: lastUpdate)))", attributes: attributes)
                     let attendanceString = NSMutableAttributedString(string: "\(attendance)% (\(attendedClasses) de \(totalClasses))")

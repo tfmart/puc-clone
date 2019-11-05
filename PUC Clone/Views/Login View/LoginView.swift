@@ -15,6 +15,8 @@ class LoginView: UIViewController {
     @IBOutlet weak var raTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    var configuration: PucConfiguration?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.isEnabled = false
@@ -27,11 +29,13 @@ class LoginView: UIViewController {
         self.loginButtonAction()
     }
     
-    fileprivate func performLogin(username: String, password: String) {
-        UserDefaults.standard.set(username, forKey: "ra")
-        UserDefaults.standard.set(password, forKey: "senha")
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        self.performSegue(withIdentifier: "today", sender: nil)
+    fileprivate func performLogin(using configuration: PucConfiguration) {
+        UserDefaults.standard.set(configuration.username, forKey: "ra")
+        UserDefaults.standard.set(configuration.password, forKey: "senha")
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            self.performSegue(withIdentifier: "today", sender: nil)
+        }
     }
     
     fileprivate func showErrorAlert(error: APIServiceError) {
@@ -48,24 +52,32 @@ class LoginView: UIViewController {
             self.present(errorAlert, animated: true, completion: nil)
             return
         }
-        let pucConfig = PuccConfiguration(username: username, password: password)
+        self.configuration = PucConfiguration(username: username, password: password)
         
-        if let token = pucConfig.token {
+        if let token = self.configuration?.pucToken {
             UserDefaults.standard.set(token, forKey: "login")
         }
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        PuccService.shared.fetchSession(config: pucConfig) { (response) in
-            DispatchQueue.main.async {
-                switch response {
-                case .success:
-                    self.performLogin(username: username, password: password)
-                case .failure(.noData):
+        let request = LoginRequester(configuration: self.configuration!) { (student, error) in
+            guard student != nil else {
+                if let requestError = error {
+                    self.showErrorAlert(error: requestError)
+                } else {
                     self.showErrorAlert(error: .noData)
-                case .failure(.apiError):
-                    self.showErrorAlert(error: .apiError)
-                default:
-                    print("Error: \(response)")
                 }
+                return
+            }
+            self.performLogin(using: self.configuration!)
+        }
+        request.start()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "today" {
+            if let navigationView = segue.destination as? UINavigationController {
+                let todayView = navigationView.topViewController as? TodayView
+                todayView!.configuration = self.configuration
             }
         }
     }

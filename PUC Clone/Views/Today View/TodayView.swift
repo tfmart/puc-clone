@@ -21,10 +21,11 @@ class TodayView: UIViewController {
     
     //MARK: - Vars
     let currentDate = Date()
-    var todayClasses = [Schedule]()
-    var allClasses = [Schedule]()
+    var todayClasses = [Subject]()
+    var allClasses = [Subject]()
     var hisotry = [CompletedSubjects]()
     var pucController = PucController()
+    var configuration: PucConfiguration?
     var avaTitles: AvaSite?
     var student: Student?
     var token: String?
@@ -49,12 +50,12 @@ class TodayView: UIViewController {
         self.styleNoClassView()
         self.styleScheduleButton()
         super.navigationItem.title = currentDate.scheduleDateTitle()
-        #if DEBUG
-        self.getDemoClasses()
-        #else
+//        #if DEBUG
+//        self.getDemoClasses()
+//        #else
         self.getTodayClasses()
         self.getCompletedSubjects()
-        #endif
+//        #endif
         self.todayClassesCollectionView.reloadData()
     }
     
@@ -106,13 +107,13 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.todayClassesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "todayClass", for: indexPath) as! TodaysClassesCollectionViewCell
-            cell.titleLabel.text = todayClasses[indexPath.row].nomeDisciplina?.formatTitle()
-            cell.scheduleLabel.text = todayClasses[indexPath.row].horario
+            cell.titleLabel.text = todayClasses[indexPath.row].name?.formatTitle()
+            cell.scheduleLabel.text = todayClasses[indexPath.row].time
             cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
-            cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"
+            cell.classroomLabel.text = "\(todayClasses[indexPath.row].building?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].room ?? "")"
             
             cell.routeButton.tag = indexPath.row
-            if pucController.setAttendanceIcon(attendance: todayClasses[indexPath.row].frequencia ?? 0.0) {
+            if pucController.setAttendanceIcon(attendance: todayClasses[indexPath.row].attendance ?? 0.0) {
                 cell.attendanceIcon.image = UIImage(named: "Good")
                 cell.attendanceIcon.tintColor = UIColor(named: "Good Attendance")
             } else {
@@ -121,7 +122,7 @@ extension TodayView:  UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.attendanceIcon.tintColor = UIColor(named: "Bad Attendance")
             }
             
-            if let attendance = todayClasses[indexPath.row].frequencia {
+            if let attendance = todayClasses[indexPath.row].attendance {
                 cell.attendanceLabel.text = "\(attendance)% de presença"
             } else {
                 cell.attendanceLabel.text = "Sem dados de presença"

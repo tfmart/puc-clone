@@ -22,17 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
-        #if DEBUG
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "todayView")
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
-        #else
+//        #if DEBUG
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "todayView")
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
+//        #else
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginView")
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
-        #endif
+//        #endif
         
         return true
     }

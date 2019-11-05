@@ -11,13 +11,13 @@ import PuccSwift
 
 class WeeklyScheduleView: UIViewController {
     
-    var allClasses = [Schedule]()
-    var todayClasses = [Schedule]()
+    var allClasses = [Subject]()
+    var todayClasses = [Subject]()
     let currentDate =  Date()
     let pucController = PucController()
     var dayWeek: String!
-    //MARK: @IBOutlets
     
+    //MARK: @IBOutlets
     @IBOutlet weak var mondayButton: UIButton!
     @IBOutlet weak var tuesdayButton: UIButton!
     @IBOutlet weak var wednesdayButton: UIButton!
@@ -60,11 +60,11 @@ extension WeeklyScheduleView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fullSchedule", for: indexPath) as! WeeklyScheduleTableViewCell
         todayClasses = self.todaysSchedule(subjects: allClasses, weekString: dayWeek)
-        cell.titleLabel.text = todayClasses[indexPath.row].nomeDisciplina?.formatTitle()
-        cell.scheduleLabel.text = todayClasses[indexPath.row].horario
+        cell.titleLabel.text = todayClasses[indexPath.row].name?.formatTitle()
+        cell.scheduleLabel.text = todayClasses[indexPath.row].time
         cell.professorLabel.text = todayClasses[indexPath.row].professor?.formatTitle()
-        cell.classroomLabel.text = "\(todayClasses[indexPath.row].predio?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].sala ?? "")"
-        if let attendance = todayClasses[indexPath.row].frequencia {
+        cell.classroomLabel.text = "\(todayClasses[indexPath.row].building?.formatTitle() ?? "") | Sala \(todayClasses[indexPath.row].room ?? "")"
+        if let attendance = todayClasses[indexPath.row].attendance {
             cell.attendanceLabel.text = "\(attendance)% de presença"
             if pucController.setAttendanceIcon(attendance: attendance) {
                 cell.attendanceIcon.image = UIImage(named: "Good")

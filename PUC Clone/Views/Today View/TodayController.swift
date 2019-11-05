@@ -53,8 +53,8 @@ extension TodayView {
     
     func getTodayClasses() {
         let today = self.getDayOfWeek()
-        let config = PuccConfiguration(username: "16111312", password: "QPW49!@V")
-        let requester = ScheduleRequester(configuration: config) { (schedule, error) in
+        // MARK: - TO-DO: Setup PucConfiguration after successful login
+        let requester = ScheduleRequester(configuration: self.configuration!) { (schedule, error) in
             guard let schedule = schedule else {
                 print("Failed to get schedule")
                 return
@@ -62,7 +62,7 @@ extension TodayView {
             DispatchQueue.main.async {
                 self.allClasses = schedule
                 for subject in schedule {
-                    if subject.diaSemana == today {
+                    if subject.dayWeek == today {
                         self.todayClasses.append(subject)
                     }
                 }
@@ -70,19 +70,7 @@ extension TodayView {
                 self.setClassesView()
             }
         }
-        requester.request()
-//        pucController.getWeekSchedule(callback: {(weeklySchedule) -> Void in
-//            DispatchQueue.main.async {
-//                self.allClasses = weeklySchedule
-//                for schedule in weeklySchedule {
-//                    if schedule.diaSemana == today {
-//                        self.todayClasses.append(schedule)
-//                    }
-//                }
-//                self.todayClassesCollectionView.reloadData()
-//                self.setClassesView()
-//            }
-//        })
+        requester.start()
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
@@ -94,7 +82,7 @@ extension TodayView {
         })
     }
     
-    final func configure(cellWithModel model: TodaysClassesCollectionViewCell, currentClass: Schedule) {
+    final func configure(cellWithModel model: TodaysClassesCollectionViewCell, currentClass: Subject) {
         self.todayClassesCollectionView.isAccessibilityElement = false
         self.todayClassesCollectionView.shouldGroupAccessibilityChildren = true
         model.titleLabel.isAccessibilityElement = false
@@ -110,25 +98,25 @@ extension TodayView {
         var description: String
         var building: String
         
-        if currentClass.nomeDisciplina!.hasPrefix("PF") {
-            className = (currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: "))!
+        if currentClass.name!.hasPrefix("PF") {
+            className = (currentClass.name?.replacingOccurrences(of: "PF-", with: "Prática de Formação: "))!
         } else {
-            className = currentClass.nomeDisciplina!
+            className = currentClass.name!
         }
         
-        if let attendance = currentClass.frequencia {
+        if let attendance = currentClass.attendance {
             classAttendance = "\(attendance)"
         } else {
             classAttendance = "Sem dados de frequência."
         }
         
-        if (currentClass.predio?.hasPrefix("Cent. Tecn"))! {
+        if (currentClass.building?.hasPrefix("Cent. Tecn"))! {
             building = "Centro Técnico"
         } else {
-            building = currentClass.predio!
+            building = currentClass.building!
         }
         
-        description = "\(className), das \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). \(classAttendance)"
+        description = "\(className), das \(currentClass.time ?? ""), no prédio \(building), sala \(currentClass.room ?? ""). \(classAttendance)"
         model.accessibilityLabel = description
     }
     
@@ -137,7 +125,7 @@ extension TodayView {
         let demoController = DemoController()
         self.allClasses = demoController.load("ScheduleData.json")
         for schedule in allClasses {
-            if schedule.diaSemana == today {
+            if schedule.dayWeek == today {
                 self.todayClasses.append(schedule)
             }
             self.todayClassesCollectionView.reloadData()

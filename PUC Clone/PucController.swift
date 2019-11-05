@@ -146,7 +146,7 @@ class PucController {
     
     //MARK: Get weekly schedule
     
-    func getWeekSchedule(callback: @escaping((_ subjects: [Schedule]) -> Void)) {
+    func getWeekSchedule(callback: @escaping((_ subjects: [Subject]) -> Void)) {
         let endpoint = "https://gateway-publico.pucapi.puc-campinas.edu.br/mobile/v3/alunos/gradehoraria"
         let login = UserDefaults.standard.string(forKey: "login")
         if let url = URL(string: endpoint) {
@@ -165,7 +165,7 @@ class PucController {
                     return
                 }
                 do {
-                    let schedule  = try JSONDecoder().decode([Schedule].self, from: data)
+                    let schedule  = try JSONDecoder().decode([Subject].self, from: data)
                     callback(schedule)
                 } catch let jsonError {
                     print(jsonError)

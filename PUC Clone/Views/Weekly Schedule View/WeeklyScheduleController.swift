@@ -39,36 +39,36 @@ extension WeeklyScheduleView {
         }
     }
     
-    func todaysSchedule(subjects: [Schedule], weekString: String) -> [Schedule] {
-        var todaySubjects = [Schedule]()
+    func todaysSchedule(subjects: [Subject], weekString: String) -> [Subject] {
+        var todaySubjects = [Subject]()
         for subject in subjects {
             switch weekString {
             case "Seg":
-                if subject.diaSemana == 2 {
+                if subject.dayWeek == 2 {
                     todaySubjects.append(subject)
                 }
             case "Ter":
-                if subject.diaSemana == 3 {
+                if subject.dayWeek == 3 {
                     todaySubjects.append(subject)
                 }
             case "Qua":
-                if subject.diaSemana == 4 {
+                if subject.dayWeek == 4 {
                     todaySubjects.append(subject)
                 }
             case "Qui":
-                if subject.diaSemana == 5 {
+                if subject.dayWeek == 5 {
                     todaySubjects.append(subject)
                 }
             case "Sex":
-                if subject.diaSemana == 6 {
+                if subject.dayWeek == 6 {
                     todaySubjects.append(subject)
                 }
             case "Sáb":
-                if subject.diaSemana == 7 {
+                if subject.dayWeek == 7 {
                     todaySubjects.append(subject)
                 }
             case "Dom":
-                if subject.diaSemana == 1 {
+                if subject.dayWeek == 1 {
                     todaySubjects.append(subject)
                 }
             default: break
@@ -82,7 +82,7 @@ extension WeeklyScheduleView {
         return todaySubjects
     }
     
-    func configureTableViewAccesibility(model: WeeklyScheduleTableViewCell, currentClass: Schedule) {
+    func configureTableViewAccesibility(model: WeeklyScheduleTableViewCell, currentClass: Subject) {
         self.scheduleTableView.isAccessibilityElement = false
         self.scheduleTableView.shouldGroupAccessibilityChildren = true
         model.titleLabel.isAccessibilityElement = false
@@ -98,25 +98,25 @@ extension WeeklyScheduleView {
         var description: String
         var building: String
         
-        if currentClass.nomeDisciplina!.hasPrefix("PF") {
-            className = (currentClass.nomeDisciplina?.replacingOccurrences(of: "PF-", with: "Prática de Formação: "))!
+        if currentClass.name!.hasPrefix("PF") {
+            className = (currentClass.name?.replacingOccurrences(of: "PF-", with: "Prática de Formação: "))!
         } else {
-            className = currentClass.nomeDisciplina!
+            className = currentClass.name!
         }
         
-        if let attendance = currentClass.frequencia {
+        if let attendance = currentClass.attendance {
             classAttendance = "\(attendance)"
         } else {
             classAttendance = "Sem dados de frequência."
         }
         
-        if (currentClass.predio?.hasPrefix("Cent. Tecn"))! {
+        if (currentClass.building?.hasPrefix("Cent. Tecn"))! {
             building = "Centro Técnico"
         } else {
-            building = currentClass.predio!
+            building = currentClass.building!
         }
         
-        description = "\(className), das \(currentClass.horario ?? ""), no prédio \(building), sala \(currentClass.sala ?? ""). \(classAttendance)"
+        description = "\(className), das \(currentClass.time ?? ""), no prédio \(building), sala \(currentClass.room ?? ""). \(classAttendance)"
         model.accessibilityLabel = description
     }
     

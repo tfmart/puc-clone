@@ -15,7 +15,7 @@ class ClassroomLocationViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var classToLocate: Schedule?
+    var classToLocate: Subject?
     let locationManager = CLLocationManager()
     var center: CLLocationCoordinate2D?
     let classroomPin = MKPointAnnotation()
@@ -24,7 +24,7 @@ class ClassroomLocationViewController: UIViewController {
         super.viewDidLoad()
         checkLocationServices()
         if let info = classToLocate {
-            super.navigationItem.title = "Prédio \(info.predio?.formatTitle() ?? "")"
+            super.navigationItem.title = "Prédio \(info.building?.formatTitle() ?? "")"
             if let latitudeString = info.latitude, let longitudeString = info.longitude {
                 if let latitudeDouble = Double(latitudeString), let longitudeDouble = Double(longitudeString) {
                     center = CLLocationCoordinate2D.init(latitude: latitudeDouble, longitude: longitudeDouble)
@@ -32,7 +32,7 @@ class ClassroomLocationViewController: UIViewController {
                         let region = MKCoordinateRegion(center: mapCenter, latitudinalMeters: 100, longitudinalMeters: 100)
                         mapView.setRegion(region, animated: false)
                         classroomPin.coordinate = mapCenter
-                        classroomPin.title = "Prédio \(info.predio?.formatTitle() ?? "")"
+                        classroomPin.title = "Prédio \(info.building?.formatTitle() ?? "")"
                         mapView.addAnnotation(classroomPin)
                     }
                 }

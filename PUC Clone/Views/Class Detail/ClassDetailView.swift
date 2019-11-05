@@ -20,20 +20,20 @@ class ClassDetailViewController: UIViewController {
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var classLabel: UILabel!
     
-    var selectedClass: Schedule?
+    var selectedClass: Subject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let currentClass = selectedClass {
             self.setAttendanceLabel()
-            headerLabel.text = currentClass.nomeDisciplina?.formatTitle()
-            courseLabel.text = currentClass.nomeCurso?.formatTitle()
-            dateTimeLabel.text = currentClass.horario
+            headerLabel.text = currentClass.name?.formatTitle()
+            courseLabel.text = currentClass.courseName?.formatTitle()
+            dateTimeLabel.text = currentClass.time
             professorLabel.text = currentClass.professor?.formatTitle()
-            locationButton.setTitle("Sala \(currentClass.sala ?? ""), Prédio \(currentClass.predio?.formatTitle() ?? ""), \(currentClass.campus ?? "")", for: .normal)
-            codeLabel.text = currentClass.codigoDisciplina
-            classLabel.text = currentClass.turma
+            locationButton.setTitle("Sala \(currentClass.room ?? ""), Prédio \(currentClass.building?.formatTitle() ?? ""), \(currentClass.campus ?? "")", for: .normal)
+            codeLabel.text = currentClass.code
+            classLabel.text = currentClass.classroom
         }
     }
     
@@ -45,7 +45,7 @@ class ClassDetailViewController: UIViewController {
         }
         if segue.identifier == "description" {
             if let descriptionView = segue.destination as? DescriptionViewController {
-                descriptionView.classDescription = selectedClass?.ementa
+                descriptionView.classDescription = selectedClass?.description
             }
         }
     }
